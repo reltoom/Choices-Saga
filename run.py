@@ -7,15 +7,29 @@ player = {
     'shoes': '',
     'color': ''
 }
-playerName = input('Please tell us your name:\n')
-player.update({'name': playerName})
 
-print('Welcome ' + player['name'] + '!\n\nCould you tell us which of these languages you know:')
+while True:
+    playerName = input('Please tell us your name:\n')
 
-playerLanguages = input('Please type the languages exactly with commas between if more than one): English, Swedish, Estonian\n')
-player.update({'languages': playerLanguages})
+    if playerName.isalpha():
+        player.update({'name': playerName})
+        print('Welcome ' + player['name'] + '!\n')
+        break   
+    else:
+        print('Please enter a name with only letters!\n')
 
-print('So you know: ' + player['languages'] + '.\n')
+print('Could you tell us which of these languages you know:')
+
+while True:
+    playerLanguages = input('Which of these languages do you know: English, Swedish, Estonian\n')
+    known_languages = [language.strip() for language in playerLanguages.split(',')]
+
+    if all(language in ['English', 'Swedish', 'Estonian'] for language in known_languages):
+        player.update({'languages': ' and '.join(known_languages)})
+        print('So you know: ' + player['languages'] + '.\n')
+        break
+    else:
+        print('Please type the languages exactly as shown with a comma between if more than one.')
 
 favoriteColor = input('What is your favorite color ' + player['name'] + '?\n')
 player.update({'color': favoriteColor})
