@@ -18,11 +18,11 @@ def intro():
         while True:
             playerName = input('Please tell us your name:\n')
 
-            #Controls if player name is only alphabetic
-            if playerName.isalpha():
+            #Controls if player name is only alphabetic and allows for spaces
+            if playerName.replace(' ', '').isalpha():
                 player.update({'name': playerName})
                 print('Welcome ' + player['name'] + '!\n')
-                break   
+                break       
             #If input contains other than letters
             else:
                 print('Please enter a name with only letters!\n')
@@ -49,8 +49,8 @@ def intro():
         while True:
             favoriteColor = input('What is your favorite color ' + player['name'] + '?\n')
 
-            #Checks if input is only letters
-            if favoriteColor.isalpha():
+            #Checks if input is only letters and allows for spaces
+            if favoriteColor.replace(' ', '').isalpha():
                 player.update({'color': favoriteColor})
                 print('Wow, ' + player['color'] + ' is a very nice color!\n')
                 break 
