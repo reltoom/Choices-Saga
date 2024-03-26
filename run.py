@@ -80,14 +80,19 @@ def intro():
 #Calls the starting-intro function
 #intro()
 
+#NEEDS TO BE IN A WHILE LOOP; WHOLE MINI GAME AND FUNCTIONS
+gridStart = [['X' for switch in range(3)] for switch in range(3)]
+one, two, three = gridStart[0]
+four, five, six = gridStart[1]
+seven, eight, nine = gridStart[2]
 
 def lightsOnPuzzle():
-    gridStart = [['X' for switch in range(3)] for switch in range(3)]
+    
     for row in gridStart:
         print(' '.join(row))
 
-
-
 lightsOnPuzzle()
 
-#print(player)
+
+def toggleLights():
+    return
