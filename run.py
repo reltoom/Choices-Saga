@@ -77,6 +77,7 @@ def intro():
             else:
                 print('Type "Yes" or "No"')
 
+#Calls the starting-intro function
 intro()
 
 
