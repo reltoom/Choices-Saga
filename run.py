@@ -78,9 +78,16 @@ def intro():
                 print('Type "Yes" or "No"')
 
 #Calls the starting-intro function
-intro()
+#intro()
+
+
+def lightsOnPuzzle():
+    gridStart = [['X' for switch in range(3)] for switch in range(3)]
+    for row in gridStart:
+        print(' '.join(row))
 
 
 
+lightsOnPuzzle()
 
-print(player)
+#print(player)
