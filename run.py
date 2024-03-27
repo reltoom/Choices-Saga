@@ -63,19 +63,19 @@ def intro():
             start = input('Now is everything you entered here correct?\nIf so, we can start your journey: Yes or No?\n')
 
             #If 'Yes' input, start story
-            if start == 'Yes':
+            if start == 'Yes' or start == 'Y':
                 print('Read first area of text file here')
                 return
 
             #If 'No' input, then restart intro questions
-            elif start == 'No':
+            elif start == 'No' or start == 'N':
                 for key in player:
                     player[key] = ''
                 print('Okay, we will begin again.\n\n')
                 break
             #If input is anything else, reask.
             else:
-                print('Type "Yes" or "No"')
+                print('Type "Y" or "N"')
 
 #Calls the starting-intro function
 #intro()
