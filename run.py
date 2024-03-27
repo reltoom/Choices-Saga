@@ -124,22 +124,28 @@ def playLights():
     print('Your objective is to turn all "X"s into "O"s by turning the switches.')
     print('When pushed, a switch will change a "X" into a "O" or a "O" into a "X".')
     print('All adjacent switches, vertically and horizontially, will also be changed.\n')
+    print('If this is too hard and you want to give up, type:"give up"\n')
     positions()
     print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
 
     while True:
-        print('Use the numbered positions to choose a switch to flip.\n')
+        print('Use the numbered positions to choose a switch to flip.')
         
         lightsOnPuzzle(gridStart)
         print()
 
         while True:    
             try:
-                toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
-                if toggle < 1 or toggle > 9:
-                    raise ValueError('Please enter a whole number between 1 and 9')
-                break
+                toggle = input('Choose a number 1-9 to the corresponding switch or type:"give up"\n')              
+                if toggle.lower() == 'give up':
+                    print('You have chosen to give up on this puzzle\n')
+                    return
+                else:
+                    toggle = int(toggle)
+                    if toggle < 1 or toggle > 9:
+                        raise ValueError('Please enter a whole number between 1 and 9')
+                    break
             except ValueError:
                 print('Invalid Input, enter a whole number between 1 and 9')
                 
