@@ -81,18 +81,48 @@ def intro():
 #intro()
 
 #NEEDS TO BE IN A WHILE LOOP; WHOLE MINI GAME AND FUNCTIONS
+def positions():
+    count = 1
+    for i in range(3):
+        for j in range(3):
+            print(count, end=' ')
+            count += 1
+        print()
+
+positions()
+print()
+print('Use the numbered positions to choose a switch to flip\n\n')
 gridStart = [['X' for switch in range(3)] for switch in range(3)]
-one, two, three = gridStart[0]
-four, five, six = gridStart[1]
-seven, eight, nine = gridStart[2]
 
 def lightsOnPuzzle():
-    
     for row in gridStart:
         print(' '.join(row))
 
 lightsOnPuzzle()
 
+toggle = int(input('Choose a number 1-9 to corresponding switch:\n'))
 
-def toggleLights():
-    return
+def toggleLights(switchNumber):
+    global gridStart
+    if switchNumber == 1:
+        if gridStart[0][0] == 'X':
+            gridStart[0][0] = 'O'
+        else:
+            gridStart[0][0] = 'X'
+        
+        if gridStart[0][1] == 'X':
+            gridStart[0][1] = 'O'
+        else:
+            gridStart[0][1] = 'X'
+
+        if gridStart[1][0] == 'X':
+            gridStart[1][0] = 'O'
+        else:
+            gridStart[1][0] = 'X'
+        
+        
+        
+        
+toggleLights(toggle)
+
+lightsOnPuzzle()
