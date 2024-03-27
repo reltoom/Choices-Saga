@@ -99,30 +99,36 @@ def lightsOnPuzzle():
         print(' '.join(row))
 
 lightsOnPuzzle()
-
+print()
 toggle = int(input('Choose a number 1-9 to corresponding switch:\n'))
 
 def toggleLights(switchNumber):
     global gridStart
-    if switchNumber == 1:
-        if gridStart[0][0] == 'X':
-            gridStart[0][0] = 'O'
-        else:
-            gridStart[0][0] = 'X'
-        
-        if gridStart[0][1] == 'X':
-            gridStart[0][1] = 'O'
-        else:
-            gridStart[0][1] = 'X'
+    rows, cols = len(gridStart), len(gridStart[0])
 
-        if gridStart[1][0] == 'X':
-            gridStart[1][0] = 'O'
+    adjacents = {
+        1: [(0, 0), (0, 1), (1, 0)],
+        2: [(0, 1), (0, 0), (0, 2), (1, 1)],
+        3: [(0, 2), (0, 1), (1, 2)],
+        4: [(1, 0), (0, 0), (1, 1), (2, 0)],
+        5: [(1, 1), (0, 1), (1, 0), (1, 2), (2, 1)],
+        6: [(1, 2), (0, 2), (1, 1), (2, 2)],
+        7: [(2, 0), (1, 0), (2, 1)],
+        8: [(2, 1), (1, 1), (2, 0), (2, 2)],
+        9: [(2, 2), (1, 2), (2, 1)]
+    }
+    
+    for rowFlip, colFlip in adjacents.get(switchNumber, []):
+        row = rowFlip
+        col = colFlip
+        if gridStart[row][col] == 'X':
+            gridStart[row][col] = 'O'
         else:
-            gridStart[1][0] = 'X'
+            gridStart[row][col] = 'X'
+    
+  
         
-        
-        
-        
+       
 toggleLights(toggle)
-
+print()
 lightsOnPuzzle()
