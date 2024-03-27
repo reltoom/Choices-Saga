@@ -80,8 +80,9 @@ def intro():
 #Calls the starting-intro function
 #intro()
 
-#Function to play LightsOn; whole minigame and functions controling it
+#Function to play LightsOn; whole minigame and functions controlling it
 def playLights():
+    #Function to print game grid with numbered positions 1 to 9
     def positions():
         count = 1
         for i in range(3):
@@ -90,13 +91,16 @@ def playLights():
                 count += 1
             print()
 
+    #Function to initate and start a all X puzzle
     def lightsOnPuzzle(gridStart):
             for row in gridStart:
                 print(' '.join(row))
 
+    #Function to switch X to O and vise versa. Creates adjacents and switchs those too
     def toggleLights(switchNumber, gridStart):
         rows, cols = len(gridStart), len(gridStart[0])
 
+        #Creates adjacents and files them in a dictonary.
         adjacents = {
             1: [(0, 0), (0, 1), (1, 0)],
             2: [(0, 1), (0, 0), (0, 2), (1, 1)],
@@ -108,7 +112,8 @@ def playLights():
             8: [(2, 1), (1, 1), (2, 0), (2, 2)],
             9: [(2, 2), (1, 2), (2, 1)]
         }
-                    
+
+        #Goes through adjacents and self to switch X to O and O to X            
         for rowLight, colLight in adjacents.get(switchNumber, []):
             row = rowLight
             col = colLight
@@ -117,10 +122,13 @@ def playLights():
             else:
                 gridStart[row][col] = 'X'
 
+        #Puzzle win condition, if all lights are O with print final grid and exit game
         if all(switch == 'O' for row in gridStart for switch in row):
             print('You turned on all the lights!\n')
             lightsOnPuzzle(gridStart)
-            return True      
+            return True  
+
+    #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
     print('Your objective is to turn all "X"s into "O"s by turning the switches.')
     print('When pushed, a switch will change a "X" into a "O" or a "O" into a "X".')
     print('All adjacent switches, vertically and horizontially, will also be changed.\n')
@@ -129,28 +137,35 @@ def playLights():
     print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
 
+    #While loop continue game until all lights are in O position
     while True:
         print('Use the numbered positions to choose a switch to flip.')
         
         lightsOnPuzzle(gridStart)
         print()
 
+        #Inner while loop to not repost numbered grid and description text, player input section
         while True:    
             try:
                 toggle = input('Choose a number 1-9 to the corresponding switch or type:"give up"\n')              
+                #If player types give up, game will end
                 if toggle.lower() == 'give up':
                     print('You have chosen to give up on this puzzle\n')
                     return
+                #If player types a number 1 to 9, will toggle and update game grid
                 else:
                     toggle = int(toggle)
                     if toggle < 1 or toggle > 9:
                         raise ValueError('Please enter a whole number between 1 and 9')
+                    #if win condition is met, will break out of this look
                     break
+            #Exception error message    
             except ValueError:
                 print('Invalid Input, enter a whole number between 1 and 9')
-                
+        #If inner loop is broken, will break outter loop too and exit        
         if toggleLights(toggle, gridStart):
             break
         print()     
 
+#Call LightsOn game
 playLights()
