@@ -133,12 +133,16 @@ def playLights():
         print()
 
         while True:    
-            toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
-            if toggleLights(toggle, gridStart):
+            try:
+                toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
+                if toggle < 1 or toggle > 9:
+                    raise ValueError('Please enter a whole number between 1 and 9')
                 break
-            print()
-            lightsOnPuzzle(gridStart)
-
-        break
+            except ValueError:
+                print('Invalid Input, enter a whole number between 1 and 9')
+                
+        if toggleLights(toggle, gridStart):
+            break
+        print()     
 
 playLights()
