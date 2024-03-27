@@ -89,18 +89,9 @@ def positions():
             count += 1
         print()
 
-positions()
-print()
-print('Use the numbered positions to choose a switch to flip\n\n')
-gridStart = [['X' for switch in range(3)] for switch in range(3)]
-
 def lightsOnPuzzle():
-    for row in gridStart:
-        print(' '.join(row))
-
-lightsOnPuzzle()
-print()
-toggle = int(input('Choose a number 1-9 to corresponding switch:\n'))
+        for row in gridStart:
+            print(' '.join(row))
 
 def toggleLights(switchNumber):
     global gridStart
@@ -117,18 +108,36 @@ def toggleLights(switchNumber):
         8: [(2, 1), (1, 1), (2, 0), (2, 2)],
         9: [(2, 2), (1, 2), (2, 1)]
     }
-    
-    for rowFlip, colFlip in adjacents.get(switchNumber, []):
-        row = rowFlip
-        col = colFlip
+                
+    for rowLight, colLight in adjacents.get(switchNumber, []):
+        row = rowLight
+        col = colLight
         if gridStart[row][col] == 'X':
             gridStart[row][col] = 'O'
         else:
             gridStart[row][col] = 'X'
-    
-  
-        
-       
-toggleLights(toggle)
+
+    if all(switch == 'O' for row in gridStart for switch in row):
+        print('You managed to turn all the lights on!\n')
+        lightsOnPuzzle()
+        return True      
+
+
+positions()
 print()
-lightsOnPuzzle()
+
+while True:
+    print('Use the numbered positions to choose a switch to flip.\n')
+    gridStart = [['X' for switch in range(3)] for switch in range(3)]
+
+    lightsOnPuzzle()
+    print()
+
+    while True:    
+        toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
+        if toggleLights(toggle):
+            break
+        print()
+        lightsOnPuzzle()
+
+    break
