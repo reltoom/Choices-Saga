@@ -123,7 +123,7 @@ def playLights():
             return True      
     print('Your objective is to turn all "X"s into "O"s by turning the switches.')
     print('When pushed, a switch will change a "X" into a "O" or a "O" into a "X".')
-    print('All adjacent switches, vertically and horizontially, will also be changed.')
+    print('All adjacent switches, vertically and horizontially, will also be changed.\n')
     positions()
     print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
