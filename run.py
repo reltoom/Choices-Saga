@@ -80,64 +80,65 @@ def intro():
 #Calls the starting-intro function
 #intro()
 
-#NEEDS TO BE IN A WHILE LOOP; WHOLE MINI GAME AND FUNCTIONS
-def positions():
-    count = 1
-    for i in range(3):
-        for j in range(3):
-            print(count, end=' ')
-            count += 1
-        print()
+#Function to play LightsOn; whole minigame and functions controling it
+def playLights():
+    def positions():
+        count = 1
+        for i in range(3):
+            for j in range(3):
+                print(count, end=' ')
+                count += 1
+            print()
 
-def lightsOnPuzzle():
-        for row in gridStart:
-            print(' '.join(row))
+    def lightsOnPuzzle(gridStart):
+            for row in gridStart:
+                print(' '.join(row))
 
-def toggleLights(switchNumber):
-    global gridStart
-    rows, cols = len(gridStart), len(gridStart[0])
+    def toggleLights(switchNumber, gridStart):
+        rows, cols = len(gridStart), len(gridStart[0])
 
-    adjacents = {
-        1: [(0, 0), (0, 1), (1, 0)],
-        2: [(0, 1), (0, 0), (0, 2), (1, 1)],
-        3: [(0, 2), (0, 1), (1, 2)],
-        4: [(1, 0), (0, 0), (1, 1), (2, 0)],
-        5: [(1, 1), (0, 1), (1, 0), (1, 2), (2, 1)],
-        6: [(1, 2), (0, 2), (1, 1), (2, 2)],
-        7: [(2, 0), (1, 0), (2, 1)],
-        8: [(2, 1), (1, 1), (2, 0), (2, 2)],
-        9: [(2, 2), (1, 2), (2, 1)]
-    }
-                
-    for rowLight, colLight in adjacents.get(switchNumber, []):
-        row = rowLight
-        col = colLight
-        if gridStart[row][col] == 'X':
-            gridStart[row][col] = 'O'
-        else:
-            gridStart[row][col] = 'X'
+        adjacents = {
+            1: [(0, 0), (0, 1), (1, 0)],
+            2: [(0, 1), (0, 0), (0, 2), (1, 1)],
+            3: [(0, 2), (0, 1), (1, 2)],
+            4: [(1, 0), (0, 0), (1, 1), (2, 0)],
+            5: [(1, 1), (0, 1), (1, 0), (1, 2), (2, 1)],
+            6: [(1, 2), (0, 2), (1, 1), (2, 2)],
+            7: [(2, 0), (1, 0), (2, 1)],
+            8: [(2, 1), (1, 1), (2, 0), (2, 2)],
+            9: [(2, 2), (1, 2), (2, 1)]
+        }
+                    
+        for rowLight, colLight in adjacents.get(switchNumber, []):
+            row = rowLight
+            col = colLight
+            if gridStart[row][col] == 'X':
+                gridStart[row][col] = 'O'
+            else:
+                gridStart[row][col] = 'X'
 
-    if all(switch == 'O' for row in gridStart for switch in row):
-        print('You managed to turn all the lights on!\n')
-        lightsOnPuzzle()
-        return True      
+        if all(switch == 'O' for row in gridStart for switch in row):
+            print('You turned on all the lights!\n')
+            lightsOnPuzzle(gridStart)
+            return True      
 
-
-positions()
-print()
-
-while True:
-    print('Use the numbered positions to choose a switch to flip.\n')
+    positions()
+    print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
 
-    lightsOnPuzzle()
-    print()
-
-    while True:    
-        toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
-        if toggleLights(toggle):
-            break
+    while True:
+        print('Use the numbered positions to choose a switch to flip.\n')
+        
+        lightsOnPuzzle(gridStart)
         print()
-        lightsOnPuzzle()
 
-    break
+        while True:    
+            toggle = int(input('Choose a number 1-9 to the corresponding switch:\n'))               
+            if toggleLights(toggle, gridStart):
+                break
+            print()
+            lightsOnPuzzle(gridStart)
+
+        break
+
+playLights()
