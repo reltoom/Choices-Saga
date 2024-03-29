@@ -162,7 +162,7 @@ def playLights():
             #Exception error message    
             except ValueError:
                 print('Invalid Input, enter a whole number between 1 and 9')
-        #If inner loop is broken, will break outter loop too and exit        
+        #Updates and shows game grid after new input. Breaks outloop if win condition is met.    
         if toggleLights(toggle, gridStart):
             break
         print()     
