@@ -129,10 +129,11 @@ def playLights():
             return True  
 
     #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
-    print('Your objective is to turn all "X"s into "O"s by turning the switches.')
+    print('Your objective is to turn all "X"s into "O"s by pushing the switches.')
     print('When pushed, a switch will change a "X" into a "O" or a "O" into a "X".')
     print('All adjacent switches, vertically and horizontially, will also be changed.\n')
     print('If this is too hard and you want to give up, type:"give up"\n')
+    print('If you want to reset the puzzle, type: "reset"\n')
     positions()
     print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
@@ -147,11 +148,16 @@ def playLights():
         #Inner while loop to not repost numbered grid and description text, player input section
         while True:    
             try:
-                toggle = input('Choose a number 1-9 to the corresponding switch or type:"give up"\n')              
+                toggle = input('Choose a number 1-9 to turn a switch or type:"give up" or "reset"\n')              
                 #If player types give up, game will end
                 if toggle.lower() == 'give up':
                     print('You have chosen to give up on this puzzle\n')
                     return
+                #If player types 'reset' will turn everything to X
+                elif toggle.lower() == 'reset':
+                    print('You wait a small amount of time and all the lights turn off')
+                    gridStart = [['X' for switch in range(3)] for switch in range(3)]
+                    break
                 #If player types a number 1 to 9, will toggle and update game grid
                 else:
                     toggle = int(toggle)
