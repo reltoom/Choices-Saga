@@ -227,7 +227,7 @@ def backDoor():
     print()
     print(sagaText)
 
-#Function to play LightsOn; whole minigame and functions controlling it
+#Function to play LightsOn; to win use each odd number once.
 def playLights():
     #Function to print game grid with numbered positions 1 to 9
     def positions():
