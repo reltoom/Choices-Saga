@@ -1,6 +1,6 @@
 #Welcome message before intro
 print('Welcome to the Choices Saga!\n')
-print('You are about to start your journey but before you do we need to know a few things about you.\n')
+print('You are about to start your journey but before you do\n we need to know a few things about you.\n')
 
 #Creates the 'player' dictonary with blank values
 player = {
@@ -60,7 +60,7 @@ def intro():
         #Question for correct data input by player
         while True:
             start = input('Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
-
+            print()
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower == 'y':
                 upDatedSagaText = updateSaga(player)
