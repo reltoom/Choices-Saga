@@ -26,10 +26,26 @@ As Harper turns around to run out again, you stop him. Do you want to help
 Harper search for survivors or tell him you need something to protect yourself
 with.
 
-Ask for Item
+Ask For Item
+"Do you have anything I can use to fight with if I get attacked on my way?"
+
+Harper reaches inside his leather overall and produce a small, but sharp
+looking knife. He flips it over and hands it to you hilt first.
+"Good luck!" he says as he once more turns around and runs off down the street.
+
+You tuck the knife into your belt, take a breath and step outside. Harper is 
+no longer in sight, but you are able to make out the mage's tower, which rises
+above the roofs and fires consuming the town. You make your way towards the 
+tower running as fast as you dare.
+
+Will you run down the center of the street, making faster progress or holding
+closer to the burning building, hoping to not draw notice?
+
+Run Down Street
+
+Keep Close To Buildings
 
 
-
-
+Help Harper
 
 Go Out Of Window

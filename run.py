@@ -98,8 +98,7 @@ def readSagaText(sagaPath, readStart, readEnd ):
 
 #Function to read sagatext.txt from lines 1 to 12 
 def updateSaga():
-    sagaText = readSagaText('sagatext.txt', 1, 12)
-    print(sagaText)    
+    sagaText = readSagaText('sagatext.txt', 1, 12)    
     return sagaText
 
 #Function for choice stairs or window, read corresponding lines
@@ -122,11 +121,28 @@ def choiceStairsWindow():
         #If any other text or numbers, ask player to write correctly
         else:
             print('Type: "stairs" or "window"')
-        
+
+#Function for choice help harper or ask for weapon
+def choiceWeaponHelpHarper():
+    playerChoice = input('Type: help or weapon\n')
+    if playerChoice.lower() == 'help':
+        sagaText = readSagaText('sagatext.txt', 44, 45)
+        print()
+        print(sagaText)
+        return
+    elif playerChoice.lower() == 'weapon':
+        player.update({'belt': 'knife'})
+        sagaText = readSagaText('sagatext.txt', 30, 43)
+        print()
+        print(sagaText)
+        return
+    else:
+        print('Type: "help" or "weapon"')
 #Calls the starting-intro function
 intro()
 
 choiceStairsWindow()
+choiceWeaponHelpHarper()
 
 
 
