@@ -82,7 +82,7 @@ def intro():
 def readSagaText(sagaPath, readStart, readEnd ):
     lines = ''
     #Skips reading to first line wanted, automatically close file on exit
-    with open (sagaPath, 'r') as file:
+    with open (sagaPath, 'r', encoding= 'utf-8') as file:
         for _ in range(readStart - 1):
             file.readline()
         #Read lines from a start point to end point
@@ -126,7 +126,7 @@ def choiceStairsWindow():
 def choiceWeaponHelpHarper():
     playerChoice = input('Type: help or weapon\n')
     if playerChoice.lower() == 'help':
-        sagaText = readSagaText('sagatext.txt', 44, 45)
+        sagaText = readSagaText('sagatext.txt', 45, 45)
         print()
         print(sagaText)
         return
@@ -138,11 +138,37 @@ def choiceWeaponHelpHarper():
         return
     else:
         print('Type: "help" or "weapon"')
+
+#Function for choice keeping close to buildings or running down the street
+def choiceQuietlyRun():
+    playerChoice = input('Will you run as fast as you can or go quietly? Type: "quietly" or "run"\n')
+    if playerChoice.lower() == 'quietly':
+        sagaText = readSagaText('sagatext.txt', 45, 50)
+        print()
+        print(sagaText)
+        if 'Swedish' in player['languages']:
+            sagaText = readSagaText('sagatext.txt', 53, 62)
+            print(sagaText)
+        else:
+            sagaText = readSagaText('sagatext.txt', 65, 66)
+            print(sagaText)
+    elif playerChoice.lower() == 'run':
+        sagaText = readSagaText('sagatext.txt', 72, 72)
+        print()
+        print(sagaText)
+        return
+    else:
+        print('Type: "quietly" or "run"')
+
+
+
+
 #Calls the starting-intro function
 intro()
 
 choiceStairsWindow()
 choiceWeaponHelpHarper()
+choiceQuietlyRun()
 
 
 
