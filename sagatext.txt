@@ -56,16 +56,17 @@ exactly what they are saying.
 stragglers. Let no one else make it to the mage's tower!"
 
 You realize these men are the raiders and facing this group would be the end of
-you. 
-
-You decide to go around the building blocking the view between them and you.
-Following the next road should lead you to the backside of the mage's tower.
+you. Will you go and try to talk to the raiders or go around the house and then
+towards the mage's tower?
 
 Only English As Language
 You have no idea what these men are talking about. Will you continue and try to
 speak with them or go around the house and then towards the mage's tower?
 
 Go Around - Avoid
+You decide to go around the building blocking the view between them and you.
+Following the next road should lead you to the backside of the mage's tower.
+
 
 Try To Speak With Men - Talk
 

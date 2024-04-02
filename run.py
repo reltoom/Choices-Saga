@@ -147,10 +147,10 @@ def choiceQuietlyRun():
         print()
         print(sagaText)
         if 'Swedish' in player['languages']:
-            sagaText = readSagaText('sagatext.txt', 53, 62)
+            sagaText = readSagaText('sagatext.txt', 53, 60)
             print(sagaText)
         else:
-            sagaText = readSagaText('sagatext.txt', 65, 66)
+            sagaText = readSagaText('sagatext.txt', 63, 64)
             print(sagaText)
     elif playerChoice.lower() == 'run':
         sagaText = readSagaText('sagatext.txt', 72, 72)
