@@ -63,7 +63,7 @@ def intro():
             print()
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower == 'y':
-                upDatedSagaText = updateSaga(player)
+                upDatedSagaText = updateSaga()
                 print(upDatedSagaText)
                 return
 
@@ -97,34 +97,36 @@ def readSagaText(sagaPath, readStart, readEnd ):
     return lines
 
 #Function to read sagatext.txt from lines 1 to 12 
-def updateSaga(player):
+def updateSaga():
     sagaText = readSagaText('sagatext.txt', 1, 12)
     print(sagaText)    
     return
 
 #Function for choice stairs or window, read corresponding lines
-def choiceStairsWindow(player):
+def choiceStairsWindow():
     #Keep asking until correcct input is given for question
     while True:
         playerChoice = input('Do you go down the stairs or out the open window? Type: stairs or window\n')
         #If player writes stairs, read lines that go from that choice
         if playerChoice.lower() == 'stairs':
             sagaText = readSagaText('sagatext.txt', 13, 28)
+            print()
             print(sagaText)    
-            return
+            return 
         #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
             sagaText = readSagaText('sagatext.txt', 35,36)
+            print()
             print(sagaText)
-            return
+            return 
         #If any other text or numbers, ask player to write correctly
         else:
             print('Type: "stairs" or "window"')
-
+        
 #Calls the starting-intro function
 intro()
 
-choiceStairsWindow(player)
+choiceStairsWindow()
 
 
 
@@ -224,4 +226,4 @@ def playLights():
         print()     
 
 #Call LightsOn game
-#playLights()
+playLights()
