@@ -6,7 +6,6 @@ print('You are about to start your journey but before you do we need to know a f
 player = {
     'name': '',
     'languages': '',
-    'shoes': '',
     'color': ''
 }
 
@@ -64,7 +63,8 @@ def intro():
 
             #If 'Yes' input, start story
             if start == 'Yes' or start == 'Y':
-                print('Read first area of text file here')
+                upDatedSagaText = updateSaga(player)
+                print(upDatedSagaText)
                 return
 
             #If 'No' input, then restart intro questions
@@ -76,9 +76,17 @@ def intro():
             #If input is anything else, reask.
             else:
                 print('Type "Y" or "N"')
+#Replaces all caps keys in sagatext file with keys from player dict.
+def updateSaga(player):
+    with open('sagatext.txt', 'r') as file:
+        sagaText = file.read()
+    for key, value in player.items():
+        sagaText = sagaText.replace(key.upper(), value)
+    print(sagaText)    
+    return
 
 #Calls the starting-intro function
-#intro()
+intro()
 
 #Function to play LightsOn; whole minigame and functions controlling it
 def playLights():
