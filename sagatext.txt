@@ -113,7 +113,7 @@ Keeping your eyes and ears open for any sound of raiders, you make your way to
 the back side of the mage's tower. Built of large dark grey stones it rises up 
 into the sky, higher than any building you have seen before. Leading up from 
 stone stairs is a door made of black iron. Each corner is painted with a golden
-star and in the middle of the door a golden full moon. To the left side of the
+star and in the center of the door a golden full moon. To the left side of the
 door, you notice something odd. A 3 by 3 block of glass sphere built into the
 wall. As you inspect it more, you realize you can push these in. When you do,
 the glass sphere glows a warm yellow along with the ones adjacent to it.
