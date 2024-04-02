@@ -153,9 +153,18 @@ def choiceQuietlyRun():
             sagaText = readSagaText('sagatext.txt', 63, 64)
             print(sagaText)
     elif playerChoice.lower() == 'run':
-        sagaText = readSagaText('sagatext.txt', 72, 72)
+        sagaText = readSagaText('sagatext.txt', 122, 126)
         print()
         print(sagaText)
+        restart = input('Would you like to restart Choices Saga? Yes or No\n')
+        if restart.lower() == 'yes' or restart.lower() == 'y':
+            for key in player:
+                player[key] = ''
+            print("Okay, let's take it from the start.\n\n")
+            intro()
+        elif restart.lower() == 'no' or restart.lower() == 'n':
+            print('You have chosen to stop playing Choices Saga! Until next time.')
+            exit()            
         return
     else:
         print('Type: "quietly" or "run"')

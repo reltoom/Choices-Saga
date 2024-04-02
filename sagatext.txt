@@ -119,6 +119,11 @@ wall. As you inspect it more, you realize you can push these in. When you do,
 the glass sphere glows a warm yellow along with the ones adjacent to it.
 
 Run Down Street - Run
+You make a mad dash, straight down the middle of the street thinking you can 
+outrun whatever maybe out here. You run so fast, that you don't have time to 
+stop or turn as your run straight into a group of 6 raiders. They cut you down
+with ease ending your life. This is the end of your story NAME, would
+you like to try again?
 
 Help Harper - Help
 
