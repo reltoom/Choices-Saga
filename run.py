@@ -59,7 +59,7 @@ def intro():
 
         #Question for correct data input by player
         while True:
-            start = input('Now is everything you entered here correct?\nIf so, we can start your journey: Yes or No?\n')
+            start = input('Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
 
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower == 'y':
@@ -75,18 +75,57 @@ def intro():
                 break
             #If input is anything else, reask.
             else:
-                print('Type "Y" or "N"')
-#Replaces all caps keys in sagatext file with keys from player dict.
+                print('Type "yes" or "no"')
+
+#Function to read specific start and end point lines from sagatext.txt and replace
+#uppercase key names with values from player
+def readSagaText(sagaPath, readStart, readEnd ):
+    lines = ''
+    #Skips reading to first line wanted
+    with open (sagaPath, 'r') as file:
+        for _ in range(readStart - 1):
+            file.readline()
+        #Read lines from a start point to end point
+        for _ in range(readStart, readEnd + 1):
+            sagaText = file.readline()
+            #Replaces key terms with values from player dict.
+            if player:
+                for key, value in player.items():
+                    sagaText = sagaText.replace(key.upper(), value)
+            #Puts all read lines together into one then returns lines
+            lines += sagaText
+    return lines
+
+#Reads sagatext.txt from lines 1 to 12 
 def updateSaga(player):
-    with open('sagatext.txt', 'r') as file:
-        sagaText = file.read()
-    for key, value in player.items():
-        sagaText = sagaText.replace(key.upper(), value)
+    sagaText = readSagaText('sagatext.txt', 1, 12)
     print(sagaText)    
     return
 
+
+def choiceStairsWindow(player):
+    while True:
+        playerChoice = input('Do you go down the stairs or out the open window? Type: stairs or window\n')
+
+        if playerChoice.lower() == 'stairs':
+            sagaText = readSagaText('sagatext.txt', 13, 25)
+            print(sagaText)    
+            return
+        elif playerChoice.lower() == 'window':
+            sagaText = readSagaText('sagatext.txt', 33,34)
+            print(sagaText)
+            return
+        else:
+            print('Type: "stairs" or "window"')
+            
 #Calls the starting-intro function
 intro()
+
+choiceStairsWindow(player)
+
+
+
+
 
 #Function to play LightsOn; whole minigame and functions controlling it
 def playLights():
@@ -182,4 +221,4 @@ def playLights():
         print()     
 
 #Call LightsOn game
-playLights()
+#playLights()
