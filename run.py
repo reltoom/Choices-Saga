@@ -212,17 +212,11 @@ def choiceSprintAct():
     else:
         print('Type: "sprint" or "act"\n')
 
-#Calls the starting-intro function
-intro()
-
-choiceStairsWindow()
-choiceWeaponHelpHarper()
-choiceQuietlyRun()
-choiceTalkAvoid()
-choiceSprintAct()
-
-
-
+#Function for Mages back door text leading ot lightson puzzle
+def backDoor():
+    sagaText = readSagaText('sagatext.txt', 112, 119)
+    print()
+    print(sagaText)
 
 #Function to play LightsOn; whole minigame and functions controlling it
 def playLights():
@@ -273,9 +267,9 @@ def playLights():
             return True  
 
     #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
-    print('Your objective is to turn all "X"s into "O"s by pushing the switches.')
-    print('When pushed, a switch will change a "X" into a "O" or a "O" into a "X".')
-    print('All adjacent switches, vertically and horizontially, will also be changed.\n')
+    print('Your objective is to turn all "X"s into "O"s by pushing the spheres.')
+    print('When pushed, a sphere will change a "X" into a "O" or a "O" into a "X".')
+    print('All adjacent spheres, vertically and horizontially, will also be changed.\n')
     print('If this is too hard and you want to give up, type:"give up"\n')
     print('If you want to reset the puzzle, type: "reset"\n')
     positions()
@@ -284,7 +278,7 @@ def playLights():
 
     #While loop continue game until all lights are in O position
     while True:
-        print('Use the numbered positions to choose a switch to flip.')
+        print('Use the numbered positions to choose a sphere to change.')
         
         lightsOnPuzzle(gridStart)
         print()
@@ -292,7 +286,7 @@ def playLights():
         #Inner while loop to not repost numbered grid and description text, player input section
         while True:    
             try:
-                toggle = input('Choose a number 1-9 to turn a switch or type:"give up" or "reset"\n')              
+                toggle = input('Choose a number 1-9 to turn a sphere or type:"give up" or "reset"\n')              
                 #If player types give up, game will end
                 if toggle.lower() == 'give up':
                     print('You have chosen to give up on this puzzle\n')
@@ -317,5 +311,18 @@ def playLights():
             break
         print()     
 
-#Call LightsOn game
-#playLights()
+
+
+#Calls the starting-intro function
+intro()
+
+choiceStairsWindow()
+choiceWeaponHelpHarper()
+choiceQuietlyRun()
+choiceTalkAvoid()
+choiceSprintAct()
+backDoor()
+playLights()
+
+
+
