@@ -56,8 +56,8 @@ exactly what they are saying.
 stragglers. Let no one else make it to the mage's tower!"
 
 You realize these men are the raiders and facing this group would be the end of
-you. Will you go and try to talk to the raiders or go around the house and then
-towards the mage's tower?
+you. Will you go and try to talk to the raiders anyway or go around the house and 
+then towards the mage's tower?
 
 Quietly -Only English As Language
 You have no idea what these men are talking about. Will you continue and try to
@@ -79,11 +79,38 @@ cannot stay here either. Do you want sprint across the road, hoping to find a
 hiding spot on the other side or act like you are one of them?
 
 Go Around - Avoid - Swedish
+You decide to go around the building blocking the view between them and you. You
+make a haste since you know some of them will be heading in this direction and
+arrive on the otherside of the building well before the raiders start coming. 
+It is easy enough to just jog across the street and make it into the shadow of
+buildings on the other side. You can see the road curving all the way to the back
+side of the mage's tower.
 
 Sprint Across - Sprint
+You breath in deep, count to three, and dash out into the open and across the
+street. You can here a shout of surpirse and a axe misses your head narrowly.
+You keep running and then jump into an alleyway and hide under some potatoe sacks
+that you find there. You pull your COLOR cloak tight around you and cover your
+head. You can hear the men run by you, their footsteps fading away into the 
+darkness. After a minute of no sounds, you come out of your hiding spot and start
+down the road. You can see the road curving all the way to the back side of the
+mage's tower.
 
-Act like them -Act
+Act like them - Act
+You think you are pretty good actor, so you wrap your COLOR cloak around your
+face like you are protecting yourself from smoke, and stumble out. You cough a
+few times and wave your hand towards a building behind you. One of the men veers
+off toward the direction of your waving, but the other one is heading straight
+to you. You clutch your knife tightly as the man reaches you. Thrusting
+forward with the knife, you manage to stab him in the gut. He screams out in
+peaking but manages to grab ahold of your arm. You struggle with him for a few
+seconds and then you feel a sharp pain in your back. Your struggle ends as your
+assailant is now able to overpower you. This is the end of your story NAME, would
+you like to try again?
 
+
+
+Back Door Mages Tower 
 Run Down Street - Run
 
 Help Harper - Help

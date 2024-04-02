@@ -179,14 +179,38 @@ def choiceTalkAvoid():
         return
     elif playerChoice.lower() == 'avoid':
         if 'Swedish' in player['languages']:
-            sagaText = readSagaText('sagatext.txt', 80, 80)
+            sagaText = readSagaText('sagatext.txt', 82, 87)
             print(sagaText)
         else:
             sagaText = readSagaText('sagatext.txt', 73, 79)
             print(sagaText)
     else:
-        print('Type: "help" or "weapon"')
+        print('Type: "talk" or "avoid"')
 
+#Function for choice to sprint across the road or act like one of them
+def choiceSprintAct():
+    playerChoice = input('Type: sprint or act\n')
+    if playerChoice.lower() == 'sprint':
+        sagaText = readSagaText('sagatext.txt', 90, 97)
+        print()
+        print(sagaText)
+        return
+    elif playerChoice.lower() == 'act':
+        sagaText = readSagaText('sagatext.txt', 100, 109)
+        print()
+        print(sagaText)
+        restart = input('Would you like to restart Choices Saga? Yes or No\n')
+        if restart.lower() == 'yes' or restart.lower() == 'y':
+            for key in player:
+                player[key] = ''
+            print("Okay, let's take it from the start.\n\n")
+            intro()
+        elif restart.lower() == 'no' or restart.lower() == 'n':
+            print('You have chosen to stop playing Choices Saga! Until next time.')
+            exit()            
+        return
+    else:
+        print('Type: "sprint" or "act"\n')
 
 #Calls the starting-intro function
 intro()
@@ -195,6 +219,7 @@ choiceStairsWindow()
 choiceWeaponHelpHarper()
 choiceQuietlyRun()
 choiceTalkAvoid()
+choiceSprintAct()
 
 
 
