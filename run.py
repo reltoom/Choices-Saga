@@ -62,13 +62,13 @@ def intro():
             start = input('Now is everything you entered here correct?\nIf so, we can start your journey: Yes or No?\n')
 
             #If 'Yes' input, start story
-            if start == 'Yes' or start == 'Y':
+            if start.lower() == 'yes' or start.lower == 'y':
                 upDatedSagaText = updateSaga(player)
                 print(upDatedSagaText)
                 return
 
             #If 'No' input, then restart intro questions
-            elif start == 'No' or start == 'N':
+            elif start.lower() == 'no' or start.lower == 'n':
                 for key in player:
                     player[key] = ''
                 print('Okay, we will begin again.\n\n')
