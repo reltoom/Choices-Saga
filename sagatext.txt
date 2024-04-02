@@ -69,17 +69,20 @@ chance to react, you find several crossbow bolts in you chest. You fall to your
 knees and then fall face first into the dirt never to rise again. This is the 
 end of your story NAME, would you like to try again?
 
-Go Around - Avoid English
-You decide to go around the building blocking the view between them and you.
-Following the next road should lead you to the backside of the mage's tower.
+Go Around - Avoid - English
+You decide to go around the building blocking the view between them and you. You
+continue to slowly and quietly make your way to the otherside of the building. 
+You can see that the next road leads to the backside of the mage's tower. All you
+have to do is cross the road. Looking back to where you heard the men, you see
+two of them heading this way. They will see you if you try to cross but you 
+cannot stay here either. Do you want sprint across the road, hoping to find a
+hiding spot on the other side or act like you are one of them?
 
-Go Around - Avoid Swedish
+Go Around - Avoid - Swedish
 
-Try To Speak With Men - Talk
-You brazenly walk out into the open calling out the men. Before you even have a
-chance to react, you find several crossbow bolts in you chest. You fall to your
-knees and then fall face first into the dirt never to rise again. This is the 
-end of your story NAME, would you like to try again?
+Sprint Across - Sprint
+
+Act like them -Act
 
 Run Down Street - Run
 

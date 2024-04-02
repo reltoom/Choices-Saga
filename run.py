@@ -175,14 +175,15 @@ def choiceTalkAvoid():
             intro()
         elif restart.lower() == 'no' or restart.lower() == 'n':
             print('You have chosen to stop playing Choices Saga! Until next time.')
-            exit()
-            
+            exit()            
         return
     elif playerChoice.lower() == 'avoid':
-        sagaText = readSagaText('sagatext.txt', 30, 43)
-        print()
-        print(sagaText)
-        return
+        if 'Swedish' in player['languages']:
+            sagaText = readSagaText('sagatext.txt', 80, 80)
+            print(sagaText)
+        else:
+            sagaText = readSagaText('sagatext.txt', 73, 79)
+            print(sagaText)
     else:
         print('Type: "help" or "weapon"')
 
