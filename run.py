@@ -81,7 +81,7 @@ def intro():
 #uppercase key names with values from player
 def readSagaText(sagaPath, readStart, readEnd ):
     lines = ''
-    #Skips reading to first line wanted
+    #Skips reading to first line wanted, automatically close file on exit
     with open (sagaPath, 'r') as file:
         for _ in range(readStart - 1):
             file.readline()
@@ -100,7 +100,7 @@ def readSagaText(sagaPath, readStart, readEnd ):
 def updateSaga():
     sagaText = readSagaText('sagatext.txt', 1, 12)
     print(sagaText)    
-    return
+    return sagaText
 
 #Function for choice stairs or window, read corresponding lines
 def choiceStairsWindow():
@@ -226,4 +226,4 @@ def playLights():
         print()     
 
 #Call LightsOn game
-playLights()
+#playLights()
