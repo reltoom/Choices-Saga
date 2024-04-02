@@ -109,12 +109,12 @@ def choiceStairsWindow(player):
         playerChoice = input('Do you go down the stairs or out the open window? Type: stairs or window\n')
         #If player writes stairs, read lines that go from that choice
         if playerChoice.lower() == 'stairs':
-            sagaText = readSagaText('sagatext.txt', 13, 25)
+            sagaText = readSagaText('sagatext.txt', 13, 28)
             print(sagaText)    
             return
         #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
-            sagaText = readSagaText('sagatext.txt', 33,34)
+            sagaText = readSagaText('sagatext.txt', 35,36)
             print(sagaText)
             return
         #If any other text or numbers, ask player to write correctly
