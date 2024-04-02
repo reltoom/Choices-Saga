@@ -96,28 +96,31 @@ def readSagaText(sagaPath, readStart, readEnd ):
             lines += sagaText
     return lines
 
-#Reads sagatext.txt from lines 1 to 12 
+#Function to read sagatext.txt from lines 1 to 12 
 def updateSaga(player):
     sagaText = readSagaText('sagatext.txt', 1, 12)
     print(sagaText)    
     return
 
-
+#Function for choice stairs or window, read corresponding lines
 def choiceStairsWindow(player):
+    #Keep asking until correcct input is given for question
     while True:
         playerChoice = input('Do you go down the stairs or out the open window? Type: stairs or window\n')
-
+        #If player writes stairs, read lines that go from that choice
         if playerChoice.lower() == 'stairs':
             sagaText = readSagaText('sagatext.txt', 13, 25)
             print(sagaText)    
             return
+        #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
             sagaText = readSagaText('sagatext.txt', 33,34)
             print(sagaText)
             return
+        #If any other text or numbers, ask player to write correctly
         else:
             print('Type: "stairs" or "window"')
-            
+
 #Calls the starting-intro function
 intro()
 
