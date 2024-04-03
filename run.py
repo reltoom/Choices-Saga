@@ -114,9 +114,18 @@ def choiceStairsWindow():
             return 
         #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
-            sagaText = readSagaText('sagatext.txt', 35,36)
+            sagaText = readSagaText('sagatext.txt', 148, 157)
             print()
             print(sagaText)
+            restart = input('Would you like to restart Choices Saga? Yes or No\n')
+            if restart.lower() == 'yes' or restart.lower() == 'y':
+                for key in player:
+                    player[key] = ''
+                print("Okay, let's take it from the start.\n\n")
+                intro()
+            elif restart.lower() == 'no' or restart.lower() == 'n':
+                print('You have chosen to stop playing Choices Saga! Until next time.')
+                exit()            
             return 
         #If any other text or numbers, ask player to write correctly
         else:
