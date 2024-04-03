@@ -17,9 +17,9 @@ def slowPrint(text, delay = 0.02):
         time.sleep(delay)
 
 #Welcome message before intro
-slowPrint('Welcome to the ', delay = 0.02)
-slowPrint(Fore.GREEN + 'CHOICES SAGA!\n' + Fore.RESET, delay = 0.02)
-slowPrint('You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay = 0.02)
+slowPrint(Fore.YELLOW + 'Welcome to the ', delay = 0.02)
+slowPrint(Fore.GREEN + 'CHOICES SAGA!\n', delay = 0.02)
+slowPrint(Fore.YELLOW + 'You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay = 0.02)
 
 #Intro function that asks starting question of the player
 def intro():
@@ -27,16 +27,16 @@ def intro():
     while True:
         #Question for players name input and control of answer
         while True:
-            playerName = input('Please tell us your name:\n')
+            playerName = input(Fore.WHITE + 'Please tell us your name:\n')
             #Controls if player name is only alphabetic and allows for spaces
             if playerName.replace(' ', '').isalpha():
                 player.update({'name': playerName})
                 print()
-                slowPrint('Welcome ' + player['name'] + '!\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'Welcome ' + player['name'] + '!\n', delay = 0.02)
                 break       
             #If input contains other than letters
             else:
-                print('Please enter a name with only letters!\n')
+                print(Fore.RED + 'Please enter a name with only letters!\n')
 
         #Setting up next question
         slowPrint('Could you tell us which of these languages you know: English and/or Swedish?\n', delay = 0.02)
@@ -44,42 +44,42 @@ def intro():
         #Question about which languages the player knows and control
         while True:
             print()
-            playerLanguages = input('Type: English, Swedish\n')
+            playerLanguages = input(Fore.WHITE + 'Type: English, Swedish\n')
             #Takes away the commas from the answers
             known_languages = [language.strip() for language in playerLanguages.split(',')]
 
             #Checks each language for exact match, adds it to player dict and joins them together with 'and' if needed
             if all(language in ['English', 'Swedish'] for language in known_languages):
                 player.update({'languages': ' and '.join(known_languages)})
-                slowPrint('So you know: ' + player['languages'] + '.\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'So you know: ' + player['languages'] + '.\n', delay = 0.02)
                 break
             #If input does not exactly match what is required 
             else:
-                print('Type each language exactly as shown with a comma between if more than one.')
+                print(Fore.RED + 'Type each language exactly as shown with a comma between if more than one.')
 
         #Question about favorite color and control of answer
         while True:
             print()
-            favoriteColor = input('What is your favorite color ' + player['name'] + '?\n')
+            favoriteColor = input(Fore.WHITE + 'What is your favorite color ' + player['name'] + '?\n')
 
             #Checks if input is only letters and allows for spaces
             if favoriteColor.replace(' ', '').isalpha():
                 player.update({'color': favoriteColor})
-                slowPrint('Wow, ' + player['color'] + ' is a very nice color!\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'Wow, ' + player['color'] + ' is a very nice color!\n', delay = 0.02)
                 break 
             #If input contains other than letters  
             else:
-                print('Please enter a color using only letters!\n')
+                print(Fore.RED + 'Please enter a color using only letters!\n')
 
         #Question for correct data input by player
         while True:
             print()
-            start = input('Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
+            start = input(Fore.WHITE + 'Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
             print()
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower() == 'y':
                 upDatedSagaText = updateSaga()
-                slowPrint(upDatedSagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + upDatedSagaText, delay = 0.02)
                 choiceStairsWindow()
                 return
 
@@ -87,11 +87,11 @@ def intro():
             elif start.lower() == 'no' or start.lower() == 'n':
                 for key in player:
                     player[key] = ''
-                print('Okay, we will begin again.\n\n')
+                print(Fore.BLUE + 'Okay, we will begin again.\n\n')
                 break
             #If input is anything else, reask.
             else:
-                print('Type "yes" or "no"')
+                print(Fore.RED + 'Type "yes" or "no"')
 
 #Function to read specific start and end point lines from sagatext.txt and replace
 #uppercase key names with values from player
