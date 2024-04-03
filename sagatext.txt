@@ -126,7 +126,7 @@ with ease ending your life. This is the end of your story NAME, would
 you like to try again?
 
 Help Harper - Help
-You run after him and shout 
+You run after him and shout:
 "Wait Harper, I'm coming with you! We'll have a better chance if we stick 
 together!"
 You and Harper run away from the tower and check a few more buildings. Together 
