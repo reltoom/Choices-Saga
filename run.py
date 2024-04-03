@@ -31,12 +31,12 @@ def intro():
 
         #Question about which languages the player knows and control
         while True:
-            playerLanguages = input('Which of these languages do you know: English, Swedish, Estonian\n')
+            playerLanguages = input('Which of these languages do you know: English and/or Swedish?\n')
             #Takes away the commas from the answers
             known_languages = [language.strip() for language in playerLanguages.split(',')]
 
             #Checks each language for exact match, adds it to player dict and joins them together with 'and' if needed
-            if all(language in ['English', 'Swedish', 'Estonian'] for language in known_languages):
+            if all(language in ['English', 'Swedish'] for language in known_languages):
                 player.update({'languages': ' and '.join(known_languages)})
                 print('So you know: ' + player['languages'] + '.\n')
                 break
