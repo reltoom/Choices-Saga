@@ -277,7 +277,7 @@ def playLights():
             print()
             sagaText = readSagaText('sagatext.txt', 171, 179)
             print(sagaText)
-            exit()
+            restartSaga()
 
     #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
     print('Your objective is to turn all "X"s into "O"s by pushing the spheres.')
@@ -305,7 +305,7 @@ def playLights():
                     print()
                     sagaText = readSagaText('sagatext.txt', 161, 168)
                     print(sagaText)
-                    exit()
+                    restartSaga()
                 #If player types 'reset' will turn everything to X
                 elif toggle.lower() == 'reset':
                     print('You wait a small amount of time and all the lights turn off')
