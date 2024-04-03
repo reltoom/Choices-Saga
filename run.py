@@ -9,6 +9,15 @@ player = {
     'color': ''
 }
 
+choiceStairs = False
+choiceHelp = False
+choiceWeapon = False
+choiceQuietly = False
+choiceAvoid = False
+choiceSprint = False
+language = False
+arriveAtDoor = False
+
 #Intro function that asks starting question of the player
 def intro():
     #In an outer loop until player answers 'Yes'
@@ -98,23 +107,25 @@ def readSagaText(sagaPath, readStart, readEnd ):
 
 #Function to read sagatext.txt from lines 1 to 12 
 def updateSaga():
-    sagaText = readSagaText('sagatext.txt', 1, 12)    
+    sagaText = readSagaText('sagatext.txt', 1, 11)    
     return sagaText
 
 #Function for choice stairs or window, read corresponding lines
 def choiceStairsWindow():
+    global choiceStairs
     #Keep asking until correcct input is given for question
     while True:
         playerChoice = input('Do you go down the stairs or out the open window? Type: stairs or window\n')
         #If player writes stairs, read lines that go from that choice
         if playerChoice.lower() == 'stairs':
-            sagaText = readSagaText('sagatext.txt', 13, 28)
+            sagaText = readSagaText('sagatext.txt', 14, 28)
+            choiceStairs = True
             print()
             print(sagaText)    
             return 
         #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
-            sagaText = readSagaText('sagatext.txt', 148, 157)
+            sagaText = readSagaText('sagatext.txt', 149, 158)
             print()
             print(sagaText)
             restart = input('Would you like to restart Choices Saga? Yes or No\n')
@@ -133,15 +144,19 @@ def choiceStairsWindow():
 
 #Function for choice help harper or ask for weapon
 def choiceWeaponHelpHarper():
+    global choiceHelp, choiceWeapon, arriveAtDoor
     playerChoice = input('Type: help or weapon\n')
     if playerChoice.lower() == 'help':
-        sagaText = readSagaText('sagatext.txt', 129, 145)
+        sagaText = readSagaText('sagatext.txt', 129, 146)
+        choiceHelp = True
+        arriveAtDoor = True
         print()
         print(sagaText)
         return
     elif playerChoice.lower() == 'weapon':
         player.update({'belt': 'knife'})
         sagaText = readSagaText('sagatext.txt', 30, 43)
+        choiceWeapon = True
         print()
         print(sagaText)
         return
@@ -150,9 +165,11 @@ def choiceWeaponHelpHarper():
 
 #Function for choice keeping close to buildings or running down the street
 def choiceQuietlyRun():
+    global choiceQuietly
     playerChoice = input('Will you run as fast as you can or go quietly? Type: "quietly" or "run"\n')
     if playerChoice.lower() == 'quietly':
         sagaText = readSagaText('sagatext.txt', 45, 50)
+        choiceQuietly = True
         print()
         print(sagaText)
         if 'Swedish' in player['languages']:
@@ -180,6 +197,7 @@ def choiceQuietlyRun():
 
 #Function for talking to raider or avoiding them
 def choiceTalkAvoid():
+    global choiceAvoid, language
     playerChoice = input('Type: talk or avoid\n')
     if playerChoice.lower() == 'talk':
         sagaText = readSagaText('sagatext.txt', 67, 70)
@@ -198,19 +216,23 @@ def choiceTalkAvoid():
     elif playerChoice.lower() == 'avoid':
         if 'Swedish' in player['languages']:
             sagaText = readSagaText('sagatext.txt', 82, 87)
+            choiceAvoid = True
+            language = True
             print(sagaText)
         else:
             sagaText = readSagaText('sagatext.txt', 73, 79)
+            choiceAvoid = True
             print(sagaText)
     else:
         print('Type: "talk" or "avoid"')
 
 #Function for choice to sprint across the road or act like one of them
 def choiceSprintAct():
+    global choiceSprint
     playerChoice = input('Type: sprint or act\n')
     if playerChoice.lower() == 'sprint':
         sagaText = readSagaText('sagatext.txt', 90, 97)
-        print()
+        choiceSprint = True
         print(sagaText)
         return
     elif playerChoice.lower() == 'act':
@@ -232,7 +254,9 @@ def choiceSprintAct():
 
 #Function for Mages back door text leading ot lightson puzzle
 def backDoor():
+    global arriveAtDoor
     sagaText = readSagaText('sagatext.txt', 112, 119)
+    arriveAtDoor = True
     print()
     print(sagaText)
 
@@ -331,16 +355,35 @@ def playLights():
 
 
 
+
 #Calls the starting-intro function
 intro()
 
 choiceStairsWindow()
-choiceWeaponHelpHarper()
-choiceQuietlyRun()
-choiceTalkAvoid()
-choiceSprintAct()
-backDoor()
-playLights()
+if choiceStairs == True:
+    choiceWeaponHelpHarper()
+
+if choiceHelp == True:
+    backDoor()
+
+if choiceWeapon == True:
+    choiceQuietlyRun()
+
+if choiceQuietly == True:
+    choiceTalkAvoid()
+
+if language == True and choiceAvoid == True:
+    backDoor()
+
+if language == False and choiceAvoid == True:
+    choiceSprintAct()
+
+if choiceSprint == True:
+    backDoor()
+
+if arriveAtDoor == True:
+    playLights()
+
 
 
 
