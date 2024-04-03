@@ -1,4 +1,8 @@
 import time
+from colorama import init, Fore
+init()
+
+
 
 #Creates the 'player' dictonary with blank values, to make story more personal
 player = {
@@ -13,7 +17,8 @@ def slowPrint(text, delay = 0.02):
         time.sleep(delay)
 
 #Welcome message before intro
-slowPrint('Welcome to the Choices Saga!\n', delay = 0.02)
+slowPrint('Welcome to the ', delay = 0.02)
+slowPrint(Fore.GREEN + 'CHOICES SAGA!\n' + Fore.RESET, delay = 0.02)
 slowPrint('You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay = 0.02)
 
 #Intro function that asks starting question of the player
