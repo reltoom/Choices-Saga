@@ -116,7 +116,7 @@ stone stairs is a door made of black iron. Each corner is painted with a golden
 star and in the center of the door a golden full moon. To the left side of the
 door, you notice something odd. A 3 by 3 block of glass sphere built into the
 wall. As you inspect it more, you realize you can push these in. When you do,
-the glass sphere glows a warm yellow along with the ones adjacent to it.
+the glass sphere glows a warm yellow, along with the ones adjacent to it.
 
 Run Down Street - Run
 You make a mad dash, straight down the middle of the street thinking you can 
@@ -126,5 +126,22 @@ with ease ending your life. This is the end of your story NAME, would
 you like to try again?
 
 Help Harper - Help
+You run after him and shout 
+"Wait Harper, I'm coming with you! We'll have a better chance if we stick 
+together!"
+You and Harper run away from the tower and check a few more buildings. Together 
+you are able to find 2 more survivors and then turn around heading toward the
+mage's tower. As your group crosses a road, you hear a shout and about 6 raiders,
+armed with crossbows and axes, charge your way. 
+"Run for the tower!" shouts Harper as he takes off.
+You and the other 2 survivors all start to run. As Harper is about to reach the 
+buildings on the other side, a crossbow bolt hits him in the back and he 
+collapses to the ground. One of the survivors running beside you is hit with a
+flying axe and falls dead. You and the last survivor make it behind the building 
+and keep running. You notice a small alleyway and jump into it to hide. He
+continues to run and the raiders give chase, missing that you had jumped into the
+alleyway to hide. After a short while of no signs of the raider, you come out of
+your hiding spot and start down the road. You can see the road curving all the
+way to the back side of the mage's tower.
 
 Go Out Of Window - Window

@@ -126,7 +126,7 @@ def choiceStairsWindow():
 def choiceWeaponHelpHarper():
     playerChoice = input('Type: help or weapon\n')
     if playerChoice.lower() == 'help':
-        sagaText = readSagaText('sagatext.txt', 45, 45)
+        sagaText = readSagaText('sagatext.txt', 129, 145)
         print()
         print(sagaText)
         return
