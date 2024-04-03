@@ -2,7 +2,7 @@
 print('Welcome to the Choices Saga!\n')
 print('You are about to start your journey but before you do\n we need to know a few things about you.\n')
 
-#Creates the 'player' dictonary with blank values
+#Creates the 'player' dictonary with blank values, to make story more personal
 player = {
     'name': '',
     'languages': '',
@@ -272,9 +272,12 @@ def playLights():
 
         #Puzzle win condition, if all lights are O with print final grid and exit game
         if all(switch == 'O' for row in gridStart for switch in row):
-            print('You turned on all the lights!\n')
-            lightsOnPuzzle(gridStart)
-            return True  
+            print()
+            lightsOnPuzzle(gridStart) 
+            print()
+            sagaText = readSagaText('sagatext.txt', 171, 179)
+            print(sagaText)
+            exit()
 
     #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
     print('Your objective is to turn all "X"s into "O"s by pushing the spheres.')
@@ -299,8 +302,10 @@ def playLights():
                 toggle = input('Choose a number 1-9 to turn a sphere or type:"give up" or "reset"\n')              
                 #If player types give up, game will end
                 if toggle.lower() == 'give up':
-                    print('You have chosen to give up on this puzzle\n')
-                    return
+                    print()
+                    sagaText = readSagaText('sagatext.txt', 161, 168)
+                    print(sagaText)
+                    exit()
                 #If player types 'reset' will turn everything to X
                 elif toggle.lower() == 'reset':
                     print('You wait a small amount of time and all the lights turn off')
@@ -311,7 +316,7 @@ def playLights():
                     toggle = int(toggle)
                     if toggle < 1 or toggle > 9:
                         raise ValueError('Please enter a whole number between 1 and 9')
-                    #if win condition is met, will break out of this look
+                    #if win condition is met, will break out of this loop
                     break
             #Exception error message    
             except ValueError:
@@ -322,9 +327,7 @@ def playLights():
         print()     
 
 
-
-
-#Calls the starting-intro function
+#Calls the starting-intro function kicking of the whole Choices Saga
 intro()
 
 
