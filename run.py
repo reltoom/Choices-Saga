@@ -262,8 +262,15 @@ def playLights():
 
     #Function to initate and start a all X puzzle
     def lightsOnPuzzle(gridStart):
+            #Runs through gridstart, paints X red an O yellow making grid
             for row in gridStart:
-                slowPrint(' '.join(row), delay = 0.04)
+                for char in row:
+                    if char == 'O':
+                        print(Fore.YELLOW + char, end=' ')
+                    elif char == 'X':
+                        print(Fore.RED + char, end=' ')
+                    else:
+                        print(char, end=' ')
                 print()
 
     #Function to switch X to O and vise versa. Creates adjacents and switchs those too
@@ -332,7 +339,7 @@ def playLights():
                     restartSaga()
                 #If player types 'reset' will turn everything to X
                 elif toggle.lower() == 'reset':
-                    slowPrint(Fore.WHITE + 'You wait a small amount of time and all the lights turn off', delay = 0.02)
+                    slowPrint(Fore.YELLOW + 'You wait a small amount of time and all the lights turn off', delay = 0.02)
                     gridStart = [['X' for switch in range(3)] for switch in range(3)]
                     break
                 #If player types a number 1 to 9, will toggle and update game grid
@@ -350,7 +357,7 @@ def playLights():
             break
         print()     
 
-
+playLights()
 #Calls the starting-intro function kicking of the whole Choices Saga
 intro()
 
