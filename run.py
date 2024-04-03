@@ -1,6 +1,4 @@
-#Welcome message before intro
-print('Welcome to the Choices Saga!\n')
-print('You are about to start your journey but before you do\n we need to know a few things about you.\n')
+import time
 
 #Creates the 'player' dictonary with blank values, to make story more personal
 player = {
@@ -9,6 +7,15 @@ player = {
     'color': ''
 }
 
+def slowPrint(text, delay = 0.02):
+    for char in text:
+        print(char, end= '', flush = True)
+        time.sleep(delay)
+
+#Welcome message before intro
+slowPrint('Welcome to the Choices Saga!\n', delay = 0.02)
+slowPrint('You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay = 0.02)
+
 #Intro function that asks starting question of the player
 def intro():
     #In an outer loop until player answers 'Yes'
@@ -16,29 +23,28 @@ def intro():
         #Question for players name input and control of answer
         while True:
             playerName = input('Please tell us your name:\n')
-
             #Controls if player name is only alphabetic and allows for spaces
             if playerName.replace(' ', '').isalpha():
                 player.update({'name': playerName})
-                print('Welcome ' + player['name'] + '!\n')
+                slowPrint('Welcome ' + player['name'] + '!\n', delay = 0.02)
                 break       
             #If input contains other than letters
             else:
                 print('Please enter a name with only letters!\n')
 
         #Setting up next question
-        print('Could you tell us which of these languages you know:')
+        slowPrint('Could you tell us which of these languages you know: English and/or Swedish?\n', delay = 0.02)
 
         #Question about which languages the player knows and control
         while True:
-            playerLanguages = input('Which of these languages do you know: English and/or Swedish?\n')
+            playerLanguages = input('Type: English, Swedish\n')
             #Takes away the commas from the answers
             known_languages = [language.strip() for language in playerLanguages.split(',')]
 
             #Checks each language for exact match, adds it to player dict and joins them together with 'and' if needed
             if all(language in ['English', 'Swedish'] for language in known_languages):
                 player.update({'languages': ' and '.join(known_languages)})
-                print('So you know: ' + player['languages'] + '.\n')
+                slowPrint('So you know: ' + player['languages'] + '.\n', delay = 0.02)
                 break
             #If input does not exactly match what is required 
             else:
@@ -51,7 +57,7 @@ def intro():
             #Checks if input is only letters and allows for spaces
             if favoriteColor.replace(' ', '').isalpha():
                 player.update({'color': favoriteColor})
-                print('Wow, ' + player['color'] + ' is a very nice color!\n')
+                slowPrint('Wow, ' + player['color'] + ' is a very nice color!\n', delay = 0.02)
                 break 
             #If input contains other than letters  
             else:
@@ -59,12 +65,13 @@ def intro():
 
         #Question for correct data input by player
         while True:
+            print()
             start = input('Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
             print()
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower() == 'y':
                 upDatedSagaText = updateSaga()
-                print(upDatedSagaText)
+                slowPrint(upDatedSagaText, delay = 0.02)
                 choiceStairsWindow()
                 return
 
