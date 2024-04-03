@@ -71,13 +71,13 @@ def intro():
             start = input('Is everything you entered correct?\nIf so, we can start your journey: Yes or No?\n')
             print()
             #If 'Yes' input, start story
-            if start.lower() == 'yes' or start.lower == 'y':
+            if start.lower() == 'yes' or start.lower() == 'y':
                 upDatedSagaText = updateSaga()
                 print(upDatedSagaText)
                 return
 
             #If 'No' input, then restart intro questions
-            elif start.lower() == 'no' or start.lower == 'n':
+            elif start.lower() == 'no' or start.lower() == 'n':
                 for key in player:
                     player[key] = ''
                 print('Okay, we will begin again.\n\n')
@@ -110,6 +110,28 @@ def updateSaga():
     sagaText = readSagaText('sagatext.txt', 1, 11)    
     return sagaText
 
+#Function for restarting game after end or death
+def restartSaga():
+    global choiceStairs, choiceHelp, choiceWeapon, choiceQuietly, choiceAvoid, choiceSprint, language, arriveAtDoor
+    choiceStairs = False
+    choiceHelp = False
+    choiceWeapon = False
+    choiceQuietly = False
+    choiceAvoid = False
+    choiceSprint = False
+    language = False
+    arriveAtDoor = False
+    restart = input('Would you like to restart Choices Saga? Yes or No\n')
+    if restart.lower() == 'yes' or restart.lower() == 'y':
+        for key in player:
+            player[key] = ''
+        print("Okay, let's take it from the start.\n\n")
+        intro()
+    elif restart.lower() == 'no' or restart.lower() == 'n':
+        print('You have chosen to stop playing Choices Saga! Until next time.')
+        exit()            
+    return 
+
 #Function for choice stairs or window, read corresponding lines
 def choiceStairsWindow():
     global choiceStairs
@@ -128,16 +150,7 @@ def choiceStairsWindow():
             sagaText = readSagaText('sagatext.txt', 149, 158)
             print()
             print(sagaText)
-            restart = input('Would you like to restart Choices Saga? Yes or No\n')
-            if restart.lower() == 'yes' or restart.lower() == 'y':
-                for key in player:
-                    player[key] = ''
-                print("Okay, let's take it from the start.\n\n")
-                intro()
-            elif restart.lower() == 'no' or restart.lower() == 'n':
-                print('You have chosen to stop playing Choices Saga! Until next time.')
-                exit()            
-            return 
+            restartSaga()
         #If any other text or numbers, ask player to write correctly
         else:
             print('Type: "stairs" or "window"')
@@ -145,112 +158,91 @@ def choiceStairsWindow():
 #Function for choice help harper or ask for weapon
 def choiceWeaponHelpHarper():
     global choiceHelp, choiceWeapon, arriveAtDoor
-    playerChoice = input('Type: help or weapon\n')
-    if playerChoice.lower() == 'help':
-        sagaText = readSagaText('sagatext.txt', 129, 146)
-        choiceHelp = True
-        arriveAtDoor = True
-        print()
-        print(sagaText)
-        return
-    elif playerChoice.lower() == 'weapon':
-        player.update({'belt': 'knife'})
-        sagaText = readSagaText('sagatext.txt', 30, 43)
-        choiceWeapon = True
-        print()
-        print(sagaText)
-        return
-    else:
-        print('Type: "help" or "weapon"')
+    while True:
+        playerChoice = input('Type: help or weapon\n')
+        if playerChoice.lower() == 'help':
+            sagaText = readSagaText('sagatext.txt', 129, 146)
+            choiceHelp = True
+            arriveAtDoor = True
+            print()
+            print(sagaText)
+            return
+        elif playerChoice.lower() == 'weapon':
+            player.update({'belt': 'knife'})
+            sagaText = readSagaText('sagatext.txt', 30, 43)
+            choiceWeapon = True
+            print()
+            print(sagaText)
+            return
+        else:
+            print('Type: "help" or "weapon"')
 
 #Function for choice keeping close to buildings or running down the street
 def choiceQuietlyRun():
     global choiceQuietly
-    playerChoice = input('Will you run as fast as you can or go quietly? Type: "quietly" or "run"\n')
-    if playerChoice.lower() == 'quietly':
-        sagaText = readSagaText('sagatext.txt', 45, 50)
-        choiceQuietly = True
-        print()
-        print(sagaText)
-        if 'Swedish' in player['languages']:
-            sagaText = readSagaText('sagatext.txt', 53, 60)
+    while True:
+        playerChoice = input('Will you run as fast as you can or go quietly? Type: "quietly" or "run"\n')
+        if playerChoice.lower() == 'quietly':
+            sagaText = readSagaText('sagatext.txt', 45, 50)
+            choiceQuietly = True
+            print()
             print(sagaText)
+            if 'Swedish' in player['languages']:
+                sagaText = readSagaText('sagatext.txt', 53, 60)
+                print(sagaText)
+            else:
+                sagaText = readSagaText('sagatext.txt', 63, 64)
+                print(sagaText)
+            break        
+        elif playerChoice.lower() == 'run':
+            sagaText = readSagaText('sagatext.txt', 122, 126)
+            print()
+            print(sagaText)
+            restartSaga()
         else:
-            sagaText = readSagaText('sagatext.txt', 63, 64)
-            print(sagaText)
-    elif playerChoice.lower() == 'run':
-        sagaText = readSagaText('sagatext.txt', 122, 126)
-        print()
-        print(sagaText)
-        restart = input('Would you like to restart Choices Saga? Yes or No\n')
-        if restart.lower() == 'yes' or restart.lower() == 'y':
-            for key in player:
-                player[key] = ''
-            print("Okay, let's take it from the start.\n\n")
-            intro()
-        elif restart.lower() == 'no' or restart.lower() == 'n':
-            print('You have chosen to stop playing Choices Saga! Until next time.')
-            exit()            
-        return
-    else:
-        print('Type: "quietly" or "run"')
+            print('Type: "quietly" or "run"')
 
 #Function for talking to raider or avoiding them
 def choiceTalkAvoid():
     global choiceAvoid, language
-    playerChoice = input('Type: talk or avoid\n')
-    if playerChoice.lower() == 'talk':
-        sagaText = readSagaText('sagatext.txt', 67, 70)
-        print()
-        print(sagaText)
-        restart = input('Would you like to restart Choices Saga? Yes or No\n')
-        if restart.lower() == 'yes' or restart.lower() == 'y':
-            for key in player:
-                player[key] = ''
-            print("Okay, let's take it from the start.\n\n")
-            intro()
-        elif restart.lower() == 'no' or restart.lower() == 'n':
-            print('You have chosen to stop playing Choices Saga! Until next time.')
-            exit()            
-        return
-    elif playerChoice.lower() == 'avoid':
-        if 'Swedish' in player['languages']:
-            sagaText = readSagaText('sagatext.txt', 82, 87)
-            choiceAvoid = True
-            language = True
+    while True:
+        playerChoice = input('Type: talk or avoid\n')
+        if playerChoice.lower() == 'talk':
+            sagaText = readSagaText('sagatext.txt', 67, 70)
+            print()
             print(sagaText)
+            restartSaga()
+        elif playerChoice.lower() == 'avoid':
+            if 'Swedish' in player['languages']:
+                sagaText = readSagaText('sagatext.txt', 82, 87)
+                choiceAvoid = True
+                language = True
+                print(sagaText)
+            else:
+                sagaText = readSagaText('sagatext.txt', 73, 79)
+                choiceAvoid = True
+                print(sagaText)
+            break
         else:
-            sagaText = readSagaText('sagatext.txt', 73, 79)
-            choiceAvoid = True
-            print(sagaText)
-    else:
-        print('Type: "talk" or "avoid"')
+            print('Type: "talk" or "avoid"')
 
 #Function for choice to sprint across the road or act like one of them
 def choiceSprintAct():
     global choiceSprint
-    playerChoice = input('Type: sprint or act\n')
-    if playerChoice.lower() == 'sprint':
-        sagaText = readSagaText('sagatext.txt', 90, 97)
-        choiceSprint = True
-        print(sagaText)
-        return
-    elif playerChoice.lower() == 'act':
-        sagaText = readSagaText('sagatext.txt', 100, 109)
-        print()
-        print(sagaText)
-        restart = input('Would you like to restart Choices Saga? Yes or No\n')
-        if restart.lower() == 'yes' or restart.lower() == 'y':
-            for key in player:
-                player[key] = ''
-            print("Okay, let's take it from the start.\n\n")
-            intro()
-        elif restart.lower() == 'no' or restart.lower() == 'n':
-            print('You have chosen to stop playing Choices Saga! Until next time.')
-            exit()            
-        return
-    else:
-        print('Type: "sprint" or "act"\n')
+    while True:
+        playerChoice = input('Type: sprint or act\n')
+        if playerChoice.lower() == 'sprint':
+            sagaText = readSagaText('sagatext.txt', 90, 97)
+            choiceSprint = True
+            print(sagaText)
+            return
+        elif playerChoice.lower() == 'act':
+            sagaText = readSagaText('sagatext.txt', 100, 109)
+            print()
+            print(sagaText)
+            restartSaga()
+        else:
+            print('Type: "sprint" or "act"\n')
 
 #Function for Mages back door text leading ot lightson puzzle
 def backDoor():
@@ -360,28 +352,29 @@ def playLights():
 intro()
 
 choiceStairsWindow()
-if choiceStairs == True:
+
+if choiceStairs:
     choiceWeaponHelpHarper()
 
-if choiceHelp == True:
+if choiceHelp:
     backDoor()
 
-if choiceWeapon == True:
+if choiceWeapon:
     choiceQuietlyRun()
 
-if choiceQuietly == True:
+if choiceQuietly:
     choiceTalkAvoid()
 
-if language == True and choiceAvoid == True:
+if language and choiceAvoid:
     backDoor()
 
-if language == False and choiceAvoid == True:
+if not language and choiceAvoid:
     choiceSprintAct()
 
-if choiceSprint == True:
+if choiceSprint:
     backDoor()
 
-if arriveAtDoor == True:
+if arriveAtDoor:
     playLights()
 
 
