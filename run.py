@@ -357,7 +357,6 @@ def playLights():
             break
         print()     
 
-playLights()
 #Calls the starting-intro function kicking of the whole Choices Saga
 intro()
 
