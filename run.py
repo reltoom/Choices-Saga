@@ -114,7 +114,7 @@ def readSagaText(sagaPath, readStart, readEnd ):
 
 #Function to read sagatext.txt from lines 1 to 12 
 def updateSaga():
-    sagaText = readSagaText('sagatext.txt', 1, 11)    
+    sagaText = readSagaText('sagatext.txt', 1, 13)    
     return sagaText
 
 #Function for restarting game after end or death

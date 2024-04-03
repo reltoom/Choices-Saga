@@ -1,178 +1,180 @@
-You awake from a nightmare of screams, fighting and fire. You dreamt that the
-village you are staying in was being raided by someone. As you shake your head
-to clear your mind, you realize it was no dream. You can see the flicker of fire
-peaking through your window and faint smell of smoke. Looking up, you notice 
-smoke filling the ceiling of your room. You jump fully awake, grab your COLOR 
-cloak and your small coin pouch. You are greeted by a puff of smoke as you pull
-open your door. The corridor beyond is filled with smoke, just a couple of feet
-of clean air by the floor. Dropping to your hands and knees, you quickly glace
-at the other doors, all of which are open. Seems everyone else has gotten out
-and not cared to wake you. You are closer to the stairs heading down, but there
-is an open window at the far end of the corridor...which way do you go?
+    You awake from a nightmare of screams, fighting and fire. You dreamt
+    that the village you are staying in was being raided by someone. As 
+    you shake your head to clear your mind, you realize it was no dream. 
+    You can see the flicker of fire peaking through your window and faint
+    smell of smoke. Looking up, you notice smoke filling the ceiling of 
+    your room. You jump fully awake, grab your COLOR cloak and your
+    small coin pouch. You are greeted by a puff of smoke as you pull open
+    your door. The corridor beyond is filled with smoke, just a couple of
+    feet of clean air by the floor. Dropping to your hands and knees, you
+    quickly glace at the other doors, all of which are open. Seems 
+    everyone else has gotten out and not cared to wake you. You are closer
+    to the stairs heading down, but there is an open window at the far end
+    of the corridor...which way do you go?
 
-Stairs Heading Down - Stairs
-Crawling quickly to the top of the stairs you slide down one step at a time.
-Finally being able to stand up you take in your surrounding of the inn. Tables
-and chairs are pushed over, spilled beer and wine covering the floor and fire
-spreading from the kitchen out towards the rest of the room. The front door to
-the inn slams open and a blood stained young man rushes in. He is holding a
-hammer and wearing a leather overall. Recognition flashes across his face and
-he blurts out:
-"Hey! You are NAME! You came by the smithy yesterday! My names Harper, my dad
-is the smith here. The whole town is under attack and being raided. We are
-trying to gather everyone at the mages tower. Make your way there!"
+    Stairs Heading Down - Stairs
+    Crawling quickly to the top of the stairs you slide down one step at a time.
+    Finally being able to stand up you take in your surrounding of the inn. Tables
+    and chairs are pushed over, spilled beer and wine covering the floor and fire
+    spreading from the kitchen out towards the rest of the room. The front door to
+    the inn slams open and a blood stained young man rushes in. He is holding a
+    hammer and wearing a leather overall. Recognition flashes across his face and
+    he blurts out:
+    "Hey! You are NAME! You came by the smithy yesterday! My names Harper, my dad
+    is the smith here. The whole town is under attack and being raided. We are
+    trying to gather everyone at the mages tower. Make your way there!"
 
-As Harper turns around to run out again, you stop him. Do you want to help
-Harper search for survivors or tell him you need something to protect yourself
-with.
+    As Harper turns around to run out again, you stop him. Do you want to help
+    Harper search for survivors or tell him you need something to protect yourself
+    with.
 
-Ask For Item - Weapon
-"Do you have anything I can use to fight with if I get attacked on my way?"
+    Ask For Item - Weapon
+    "Do you have anything I can use to fight with if I get attacked on my way?"
 
-Harper reaches inside his leather overall and produce a small, but sharp
-looking knife. He flips it over and hands it to you hilt first.
-"Good luck!" he says as he once more turns around and runs off down the street.
+    Harper reaches inside his leather overall and produce a small, but sharp
+    looking knife. He flips it over and hands it to you hilt first.
+    "Good luck!" he says as he once more turns around and runs off down the street.
 
-You tuck the knife into your belt, take a breath and step outside. Harper is 
-no longer in sight, but you are able to make out the mage's tower, which rises
-above the roofs and fires consuming the town. You make your way towards the 
-tower running as fast as you dare.
+    You tuck the knife into your belt, take a breath and step outside. Harper is 
+    no longer in sight, but you are able to make out the mage's tower, which rises
+    above the roofs and fires consuming the town. You make your way towards the 
+    tower running as fast as you dare.
 
-Will you run down the center of the street, making faster progress or hold
-closer to the burning buildings, hoping to not draw notice?
+    Will you run down the center of the street, making faster progress or hold
+    closer to the burning buildings, hoping to not draw notice?
 
-Keep Close To Buildings - Quietly
-You hunch down and try to quietly run along side the burning buildings, the heat
-of the fires warming you as you go. As you near a wider gap in the buildings,
-you can hear mumbled voices. You slow down before coming to the corner and hear:
+    Keep Close To Buildings - Quietly
+    You hunch down and try to quietly run along side the burning buildings, the heat
+    of the fires warming you as you go. As you near a wider gap in the buildings,
+    you can hear mumbled voices. You slow down before coming to the corner and hear:
 
-"Vi har det här området! Gå över till nästa gata och se om du kan fånga några
-eftersläpande. Låt ingen annan ta sig till magikern's torn!"
+    "Vi har det här området! Gå över till nästa gata och se om du kan fånga några
+    eftersläpande. Låt ingen annan ta sig till magikern's torn!"
 
-Quietly - Swedish As Language
-Lucky for you, your father made you learn Swedish growing up! You understand
-exactly what they are saying.
-"We got this area! Go over to the next street and see if you can catch any
-stragglers. Let no one else make it to the mage's tower!"
+    Quietly - Swedish As Language
+    Lucky for you, your father made you learn Swedish growing up! You understand
+    exactly what they are saying.
+    "We got this area! Go over to the next street and see if you can catch any
+    stragglers. Let no one else make it to the mage's tower!"
 
-You realize these men are the raiders and facing this group would be the end of
-you. Will you go and try to talk to the raiders anyway or go around the house and 
-then towards the mage's tower?
+    You realize these men are the raiders and facing this group would be the end of
+    you. Will you go and try to talk to the raiders anyway or go around the house and 
+    then towards the mage's tower?
 
-Quietly -Only English As Language
-You have no idea what these men are talking about. Will you continue and try to
-speak with them or go around the house and then towards the mage's tower?
+    Quietly -Only English As Language
+    You have no idea what these men are talking about. Will you continue and try to
+    speak with them or go around the house and then towards the mage's tower?
 
-Try To Speak With Men - Talk
-You brazenly walk out into the open calling out the men. Before you even have a
-chance to react, you find several crossbow bolts in you chest. You fall to your
-knees and then fall face first into the dirt never to rise again. This is the 
-end of your story NAME, would you like to try again?
+    Try To Speak With Men - Talk
+    You brazenly walk out into the open calling out the men. Before you even have a
+    chance to react, you find several crossbow bolts in you chest. You fall to your
+    knees and then fall face first into the dirt never to rise again. This is the 
+    end of your story NAME, would you like to try again?
 
-Go Around - Avoid - English
-You decide to go around the building blocking the view between them and you. You
-continue to slowly and quietly make your way to the otherside of the building. 
-You can see that the next road leads to the backside of the mage's tower. All you
-have to do is cross the road. Looking back to where you heard the men, you see
-two of them heading this way. They will see you if you try to cross but you 
-cannot stay here either. Do you want sprint across the road, hoping to find a
-hiding spot on the other side or act like you are one of them?
+    Go Around - Avoid - English
+    You decide to go around the building blocking the view between them and you. You
+    continue to slowly and quietly make your way to the otherside of the building. 
+    You can see that the next road leads to the backside of the mage's tower. All you
+    have to do is cross the road. Looking back to where you heard the men, you see
+    two of them heading this way. They will see you if you try to cross but you 
+    cannot stay here either. Do you want sprint across the road, hoping to find a
+    hiding spot on the other side or act like you are one of them?
 
-Go Around - Avoid - Swedish
-You decide to go around the building blocking the view between them and you. You
-make a haste since you know some of them will be heading in this direction and
-arrive on the otherside of the building well before the raiders start coming. 
-It is easy enough to just jog across the street and make it into the shadow of
-buildings on the other side. You can see the road curving all the way to the back
-side of the mage's tower.
+    Go Around - Avoid - Swedish
+    You decide to go around the building blocking the view between them and you. You
+    make a haste since you know some of them will be heading in this direction and
+    arrive on the otherside of the building well before the raiders start coming. 
+    It is easy enough to just jog across the street and make it into the shadow of
+    buildings on the other side. You can see the road curving all the way to the back
+    side of the mage's tower.
 
-Sprint Across - Sprint
-You breath in deep, count to three, and dash out into the open and across the
-street. You can here a shout of surpirse and a axe misses your head narrowly.
-You keep running and then jump into an alleyway and hide under some potatoe sacks
-that you find there. You pull your COLOR cloak tight around you and cover your
-head. You can hear the men run by you, their footsteps fading away into the 
-darkness. After a minute of no sounds, you come out of your hiding spot and start
-down the road. You can see the road curving all the way to the back side of the
-mage's tower.
+    Sprint Across - Sprint
+    You breath in deep, count to three, and dash out into the open and across the
+    street. You can here a shout of surpirse and a axe misses your head narrowly.
+    You keep running and then jump into an alleyway and hide under some potatoe sacks
+    that you find there. You pull your COLOR cloak tight around you and cover your
+    head. You can hear the men run by you, their footsteps fading away into the 
+    darkness. After a minute of no sounds, you come out of your hiding spot and start
+    down the road. You can see the road curving all the way to the back side of the
+    mage's tower.
 
-Act like them - Act
-You think you are pretty good actor, so you wrap your COLOR cloak around your
-face like you are protecting yourself from smoke, and stumble out. You cough a
-few times and wave your hand towards a building behind you. One of the men veers
-off toward the direction of your waving, but the other one is heading straight
-to you. You clutch your knife tightly as the man reaches you. Thrusting
-forward with the knife, you manage to stab him in the gut. He screams out in
-pain but manages to grab ahold of your arm. You struggle with him for a few
-seconds and then you feel a sharp pain in your back. Your struggle ends as your
-assailant is now able to overpower you. This is the end of your story NAME, would
-you like to try again?
+    Act like them - Act
+    You think you are pretty good actor, so you wrap your COLOR cloak around your
+    face like you are protecting yourself from smoke, and stumble out. You cough a
+    few times and wave your hand towards a building behind you. One of the men veers
+    off toward the direction of your waving, but the other one is heading straight
+    to you. You clutch your knife tightly as the man reaches you. Thrusting
+    forward with the knife, you manage to stab him in the gut. He screams out in
+    pain but manages to grab ahold of your arm. You struggle with him for a few
+    seconds and then you feel a sharp pain in your back. Your struggle ends as your
+    assailant is now able to overpower you. This is the end of your story NAME, would
+    you like to try again?
 
-Back Door Mages Tower 
-Keeping your eyes and ears open for any sound of raiders, you make your way to 
-the back side of the mage's tower. Built of large dark grey stones it rises up 
-into the sky, higher than any building you have seen before. Leading up from 
-stone stairs is a door made of black iron. Each corner is painted with a golden
-star and in the center of the door a golden full moon. To the left side of the
-door, you notice something odd. A 3 by 3 block of glass sphere built into the
-wall. As you inspect it more, you realize you can push these in. When you do,
-the glass sphere glows a warm yellow, along with the ones adjacent to it.
+    Back Door Mages Tower 
+    Keeping your eyes and ears open for any sound of raiders, you make your way to 
+    the back side of the mage's tower. Built of large dark grey stones it rises up 
+    into the sky, higher than any building you have seen before. Leading up from 
+    stone stairs is a door made of black iron. Each corner is painted with a golden
+    star and in the center of the door a golden full moon. To the left side of the
+    door, you notice something odd. A 3 by 3 block of glass sphere built into the
+    wall. As you inspect it more, you realize you can push these in. When you do,
+    the glass sphere glows a warm yellow, along with the ones adjacent to it.
 
-Run Down Street - Run
-You make a mad dash, straight down the middle of the street thinking you can 
-outrun whatever maybe out here. You run so fast, that you don't have time to 
-stop or turn as your run straight into a group of 6 raiders. They cut you down
-with ease ending your life. This is the end of your story NAME, would
-you like to try again?
+    Run Down Street - Run
+    You make a mad dash, straight down the middle of the street thinking you can 
+    outrun whatever maybe out here. You run so fast, that you don't have time to 
+    stop or turn as your run straight into a group of 6 raiders. They cut you down
+    with ease ending your life. This is the end of your story NAME, would
+    you like to try again?
 
-Help Harper - Help
-You run after him and shout:
-"Wait Harper, I'm coming with you! We'll have a better chance if we stick 
-together!"
-You and Harper run away from the tower and check a few more buildings. Together 
-you are able to find 2 more survivors and then turn around heading toward the
-mage's tower. As your group crosses a road, you hear a shout and about 6 raiders,
-armed with crossbows and axes, charge your way. 
-"Run for the tower!" shouts Harper as he takes off.
+    Help Harper - Help
+    You run after him and shout:
+    "Wait Harper, I'm coming with you! We'll have a better chance if we stick 
+    together!"
+    You and Harper run away from the tower and check a few more buildings. Together 
+    you are able to find 2 more survivors and then turn around heading toward the
+    mage's tower. As your group crosses a road, you hear a shout and about 6 raiders,
+    armed with crossbows and axes, charge your way. 
+    "Run for the tower!" shouts Harper as he takes off.
 
-You and the other 2 survivors all start to run. As Harper is about to reach the 
-buildings on the other side, a crossbow bolt hits him in the back and he 
-collapses to the ground. One of the survivors running beside you is hit with a
-flying axe and falls dead. You and the last survivor make it behind the building 
-and keep running. You notice a small alleyway and jump into it to hide. He
-continues to run and the raiders give chase, missing that you had jumped into the
-alleyway to hide. After a short while of no signs of the raider, you come out of
-your hiding spot and start down the road. You can see the road curving all the
-way to the back side of the mage's tower.
+    You and the other 2 survivors all start to run. As Harper is about to reach the 
+    buildings on the other side, a crossbow bolt hits him in the back and he 
+    collapses to the ground. One of the survivors running beside you is hit with a
+    flying axe and falls dead. You and the last survivor make it behind the building 
+    and keep running. You notice a small alleyway and jump into it to hide. He
+    continues to run and the raiders give chase, missing that you had jumped into the
+    alleyway to hide. After a short while of no signs of the raider, you come out of
+    your hiding spot and start down the road. You can see the road curving all the
+    way to the back side of the mage's tower.
 
-Go Out Of Window - Window
-You crawl your way to the open window and jump out not understanding that you
-were on the second floor. You fall down to the ground breaking your ankle, but 
-holding in your scream of pain. As you stand up and limp away holding onto the 
-side of the building, you wander aimlessly. You are not sure where to go and
-or what is happening. You see a group of men standing in the street and you 
-call out to them. Before you even have a chance to react, you find several
-crossbow bolts in you chest. You fall to your knees and then fall face first
-into the dirt never to rise again. 
+    Go Out Of Window - Window
+    You crawl your way to the open window and jump out not understanding that you
+    were on the second floor. You fall down to the ground breaking your ankle, but 
+    holding in your scream of pain. As you stand up and limp away holding onto the 
+    side of the building, you wander aimlessly. You are not sure where to go and
+    or what is happening. You see a group of men standing in the street and you 
+    call out to them. Before you even have a chance to react, you find several
+    crossbow bolts in you chest. You fall to your knees and then fall face first
+    into the dirt never to rise again. 
 
-This is the end of your story NAME, would you like to try again?
+    This is the end of your story NAME, would you like to try again?
 
-Give Up Puzzle
-You just cannot turn all the lights on, it's frustrating and you give up trying.
-As you come back down the stairs, you notices several different group of raiders
-approaching from all side. There is no avenue of escape now. Putting your hands
-up and surrending, saves your life, but you are taken prisoner. They drag you off
-with arms and legs tied.
+    Give Up Puzzle
+    You just cannot turn all the lights on, it's frustrating and you give up trying.
+    As you come back down the stairs, you notices several different group of raiders
+    approaching from all side. There is no avenue of escape now. Putting your hands
+    up and surrending, saves your life, but you are taken prisoner. They drag you off
+    with arms and legs tied.
 
-This is the end of Chapter 1 of the Choices Saga. Thank you for playing and
-please come back for more stories in the future.
+    This is the end of Chapter 1 of the Choices Saga. Thank you for playing and
+    please come back for more stories in the future.
 
-All Lights Turn On
-As you turn on all the spheres, you hear a hiss of air as the iron door slides
-out and then to the right, opening the door into the mage's tower. You step 
-through the doorway just as you hear voices shouting and footsteps running 
-closer. Before any of the raider can make it up the stairs, the door closes 
-again with a loud thud. 
+    All Lights Turn On
+    As you turn on all the spheres, you hear a hiss of air as the iron door slides
+    out and then to the right, opening the door into the mage's tower. You step 
+    through the doorway just as you hear voices shouting and footsteps running 
+    closer. Before any of the raider can make it up the stairs, the door closes 
+    again with a loud thud. 
 
-This is the end of Chapter 1 of the Choices Saga. Thank you for playing and
-please come back for more stories in the future.
+    This is the end of Chapter 1 of the Choices Saga. Thank you for playing and
+    please come back for more stories in the future.
