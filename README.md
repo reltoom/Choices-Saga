@@ -128,44 +128,49 @@ If the user chooses to not restart Choices Saga, an exit message will be printed
 
 ### Languages 
 
-Python was used in the making of Choices Saga
+Python was used in the making of Choices Saga.
+I imported the following packages:
+[Colorama](https://pypi.org/project/colorama/) - I used the colorama Python package to add colors to Choices Saga.
+[Time](https://docs.python.org/3/library/time.html) - I used 'Time' to slowly print out the story text, by delaying each character in the text.
 
 ###  Websites & Programs 
-
+* [Chatgpt](https://chat.openai.com/) - Used to help identify problems in code and possible way to solve them.
 * [Github](https://github.com/) - Created repository and stored files here after commits.
+* [Heroku](https://heroku.com/) - For deploying Choices Saga.
 * [Microsoft Visual Studio](https://visualstudio.microsoft.com/) - Wrote code and did commits to Github from here.
 * [W3 School](https://www.w3schools.com/) Read and used as a guide for some code.
-
 
 - - -
 
 ## Deployment 
 
-Kidz Memo is deployed from Heroku - [Choices Saga](https://choices-saga-20bfad436228.herokuapp.com/).
+Choices Saga is deployed from Heroku - [Choices Saga](https://choices-saga-20bfad436228.herokuapp.com/).
 
-To Deploy the site from GitHub Pages:
+To Deploy the site from Heroku Pages:
 
-1. Go to the repository for this project and choose 'Settings'
-2. From left side selection, go to 'Pages'.
-3. Under 'Build and Deployment' from Source - choose 'Deploy from a branch'.
-4. Under 'Branch', choose 'Main' from the first dropdown menu.
-5. From the second dropdown menu, with the image of a folder, choose 'root', then save.
+1. Log in or create account in Heroku and then log in.
+2. Once logged in, in the upper right hand side of the screen, click 'New' and then 'Create new app'.
+3. Choose a name that is not taken, in this case Choices-Saga, and click 'Create app'.
+4. From here click the 'Settings' tab.
+5. If needed, add Config Vars, otherside continue.
+6. Click the 'Add buildpack' and choose, 'python' first and then 'nodejs'. If not chosen in this order you can reorder them by clicking and draging them.
+7. Now scroll back up and go to the 'Deploy' tab.
+8. Under 'Deployment method' click the 'Github' button and connect to your github account.
+9. Choose your deployment method -- Automatic or Manual. Automatic is easier but you do not have as much control over deployement as in manual. Choices Saga used automatic, but you are able to switch when ever you want.
 
-![Deployment Steps](assets/readmeimages/deploy.png)
+#### How to Fork in Github
 
-#### How to Fork
+If you want to fork this repository in Github:
 
-If you want to fork this repository:
-
-1. Go to the repository for this project, [Kidz Memo](https://github.com/reltoom/Memo).
+1. Go to the repository for this project [Choices Saga](https://github.com/reltoom/Choices-Saga).
 2. In the upper right hand area of the screen, click the 'Fork' button.
 3. Then when the menu drops down, click 'Create New Fork'. (If you are the owner of a repository, you cannot fork.) 
 
-#### How to Clone
+#### How to Clone in Github
 
 If you want to clone this repository:
 
-1. Go to the repository for this project [Kidz Memo](https://github.com/reltoom/Memo).
+1. Go to the repository for this project [Choices Saga](https://github.com/reltoom/Choices-Saga).
 3. Click on the green 'Code' button and then select how you would like to clone: HTTPS, SSH or GitHub CLI (under the 'local' tab). 
 4. Either copy the desired code or click to open with another program from the list below the code.
 4. Open your code editor and go to 'Clone Repository' usually under 'File'.
