@@ -32,14 +32,15 @@ def intro():
         while True:
             playerName = input(Fore.WHITE + 'Please tell us your name:\n')
             # Controls if player name is only alphabetic and allows for spaces
-            if playerName.replace(' ', '').isalpha():
+            if playerName.replace(' ', '').isalpha() and len(playerName) <= 20:
                 player.update({'name': playerName})
                 print()
                 slowPrint(Fore.YELLOW + 'Welcome ' + player['name'] + '!\n')
                 break
-            # If input contains other than letters
+            # If input contains other than letters or is longer than 20 char
             else:
-                print(Fore.RED + 'Please enter a name with only letters!\n')
+                print(Fore.RED + 'Please enter a name with only letters '
+                      'and less than 20 characters\n')
 
         # Setting up next question
         slowPrint(Fore.WHITE + 'Could you tell us which of these languages you'
@@ -75,18 +76,20 @@ def intro():
         # Question about favorite color and control of answer
         while True:
             print()
-            favoriteColor = input(Fore.WHITE +
+            favoriteC = input(Fore.WHITE +
                                   'What is your favorite color '
                                   + player['name'] + '?\n')
             # Checks if input is only letters and allows for spaces
-            if favoriteColor.replace(' ', '').isalpha():
-                player.update({'color': favoriteColor})
+            if favoriteC.replace(' ', '').isalpha()and len(favoriteC) <= 20:
+                player.update({'color': favoriteC})
                 slowPrint(Fore.YELLOW + 'Wow, ' + player['color']
                           + ' is a very nice color!\n')
                 break
-            # If input contains other than letters
+            # If input contains other than letters or more than 20 char
             else:
-                print(Fore.RED + 'Please enter a color using only letters!\n')
+                print(Fore.RED +
+                      'Please enter a color using only letters'
+                      ' and less than 20 characters\n')
 
         # Question for correct data input by player
         while True:
