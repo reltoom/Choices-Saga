@@ -56,6 +56,10 @@ For Choices Saga, I knew I wanted an adventure story with choices at certain poi
 * Forth, I went back to all of the 'empty' choice key words and filled in a new story arc, possibly creating new keywords/choices. I did this until there were no empty keywords/choices.
 * Last, I created the functions(for each choice) in Python to read the story text(only certain lines) and then tied them together so that the right function would run after each user choice.
 
+For Choices Saga choices and inputs I created a paper flowchart which I later update to a computerize one.
+
+![Flowchart](readmeimages/flowchart.png)
+
 ## Design
 
 Visually there was not too much to design with Choices Saga as it is a command line application. Although I did use slowPrint to slowly print out the story text. This way it is not so much text at once, possibly overwhelming the user. Story text is also centered, creating space both infront and behind text printed for easier reading. Also choosing different colors for the text was included, for better user experience.
