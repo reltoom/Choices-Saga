@@ -17,9 +17,9 @@ def slowPrint(text, delay=0.02):
         time.sleep(delay)
 
 #Welcome message before intro
-slowPrint(Fore.YELLOW + 'Welcome to the ', delay = 0.02)
-slowPrint(Fore.GREEN + 'CHOICES SAGA!\n', delay = 0.02)
-slowPrint(Fore.YELLOW + 'You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay = 0.02)
+slowPrint(Fore.YELLOW + 'Welcome to the ', delay=0.02)
+slowPrint(Fore.GREEN + 'CHOICES SAGA!\n', delay=0.02)
+slowPrint(Fore.YELLOW + 'You are about to start your journey but before you do\nwe need to know a few things about you.\n', delay=0.02)
 
 #Intro function that asks starting question of the player
 def intro():
@@ -32,14 +32,14 @@ def intro():
             if playerName.replace(' ', '').isalpha():
                 player.update({'name': playerName})
                 print()
-                slowPrint(Fore.YELLOW + 'Welcome ' + player['name'] + '!\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'Welcome ' + player['name'] + '!\n', delay=0.02)
                 break       
             #If input contains other than letters
             else:
                 print(Fore.RED + 'Please enter a name with only letters!\n')
 
         #Setting up next question
-        slowPrint(Fore.WHITE + 'Could you tell us which of these languages you know: ' + Fore.CYAN + 'English' + Fore.WHITE + ' and/or ' + Fore.CYAN + 'Swedish' + Fore.WHITE + '?\n', delay = 0.02)
+        slowPrint(Fore.WHITE + 'Could you tell us which of these languages you know: ' + Fore.CYAN + 'English' + Fore.WHITE + ' and/or ' + Fore.CYAN + 'Swedish' + Fore.WHITE + '?\n', delay=0.02)
 
         #Question about which languages the player knows and control
         while True:
@@ -51,7 +51,7 @@ def intro():
             #Checks each language for exact match, adds it to player dict and joins them together with 'and' if needed
             if all(language in ['English', 'Swedish'] for language in known_languages):
                 player.update({'languages': ' and '.join(known_languages)})
-                slowPrint(Fore.YELLOW + 'So you know: ' + player['languages'] + '.\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'So you know: ' + player['languages'] + '.\n', delay=0.02)
                 break
             #If input does not exactly match what is required 
             else:
@@ -65,7 +65,7 @@ def intro():
             #Checks if input is only letters and allows for spaces
             if favoriteColor.replace(' ', '').isalpha():
                 player.update({'color': favoriteColor})
-                slowPrint(Fore.YELLOW + 'Wow, ' + player['color'] + ' is a very nice color!\n', delay = 0.02)
+                slowPrint(Fore.YELLOW + 'Wow, ' + player['color'] + ' is a very nice color!\n', delay=0.02)
                 break 
             #If input contains other than letters  
             else:
@@ -79,7 +79,7 @@ def intro():
             #If 'Yes' input, start story
             if start.lower() == 'yes' or start.lower() == 'y':
                 upDatedSagaText = updateSaga()
-                slowPrint(Fore.YELLOW + upDatedSagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + upDatedSagaText, delay=0.02)
                 choiceStairsWindow()
                 return
 
@@ -124,10 +124,10 @@ def restartSaga():
     if restart.lower() == 'yes' or restart.lower() == 'y':
         for key in player:
             player[key] = ''
-        slowPrint(Fore.BLUE + "Okay, let's take it from the start.\n\n", delay = 0.02)
+        slowPrint(Fore.BLUE + "Okay, let's take it from the start.\n\n", delay=0.02)
         intro()
     elif restart.lower() == 'no' or restart.lower() == 'n':
-        slowPrint(Fore.MAGENTA + 'You have chosen to stop playing Choices Saga! Until next time.', delay = 0.02)
+        slowPrint(Fore.MAGENTA + 'You have chosen to stop playing Choices Saga! Until next time.', delay=0.02)
         exit()            
     return 
 
@@ -141,14 +141,14 @@ def choiceStairsWindow():
         if playerChoice.lower() == 'stairs':
             sagaText = readSagaText('sagatext.txt', 16, 30)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             choiceWeaponHelpHarper()    
             return 
         #If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
             sagaText = readSagaText('sagatext.txt', 172, 182)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             restartSaga()
         #If any other text or numbers, ask player to write correctly
         else:
@@ -161,14 +161,14 @@ def choiceWeaponHelpHarper():
         if playerChoice.lower() == 'help':
             sagaText = readSagaText('sagatext.txt', 147, 169)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             backDoor()
             return
         elif playerChoice.lower() == 'weapon':
             player.update({'belt': 'knife'})
             sagaText = readSagaText('sagatext.txt', 33, 47)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             choiceQuietlyRun()
             return
         else:
@@ -185,17 +185,17 @@ def choiceQuietlyRun():
             slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
             if 'Swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 59, 66)
-                slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + sagaText, delay=0.02)
                 choiceTalkAvoid()
             else:
                 sagaText = readSagaText('sagatext.txt', 69, 71)
-                slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + sagaText, delay=0.02)
                 choiceTalkAvoid()
             break        
         elif playerChoice.lower() == 'run':
             sagaText = readSagaText('sagatext.txt', 140, 144)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             restartSaga()
         else:
             print(Fore.RED + 'Type: "' + Fore.CYAN + 'quietly' + Fore.RED + '" or "' + Fore.CYAN + 'run' + Fore.RED + '"')
@@ -207,18 +207,18 @@ def choiceTalkAvoid():
         if playerChoice.lower() == 'talk':
             sagaText = readSagaText('sagatext.txt', 74, 78)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             restartSaga()
         elif playerChoice.lower() == 'avoid':
             if 'Swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 91, 96)
                 print()
-                slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + sagaText, delay=0.02)
                 backDoor()
             else:
                 sagaText = readSagaText('sagatext.txt', 81, 88)
                 print()
-                slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+                slowPrint(Fore.YELLOW + sagaText, delay=0.02)
                 choiceSprintAct()
             break
         else:
@@ -231,13 +231,13 @@ def choiceSprintAct():
         if playerChoice.lower() == 'sprint':
             sagaText = readSagaText('sagatext.txt', 99, 108)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             backDoor()
             return
         elif playerChoice.lower() == 'act':
             sagaText = readSagaText('sagatext.txt', 111, 123)
             print()
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             restartSaga()
         else:
             print(Fore.RED + 'Type: "' + Fore.CYAN + 'sprint' + Fore.RED + '" or "' + Fore.CYAN + 'act' + Fore.RED + '"\n')
@@ -246,7 +246,7 @@ def choiceSprintAct():
 def backDoor():
     sagaText = readSagaText('sagatext.txt', 126, 137)
     print()
-    slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+    slowPrint(Fore.YELLOW + sagaText, delay=0.02)
     playLights()
 
 #Function to play LightsOn; to win use each odd number once.
@@ -305,17 +305,17 @@ def playLights():
             lightsOnPuzzle(gridStart) 
             print()
             sagaText = readSagaText('sagatext.txt', 196, 203)
-            slowPrint(Fore.YELLOW + sagaText, delay = 0.02)
+            slowPrint(Fore.YELLOW + sagaText, delay=0.02)
             restartSaga()
 
     #Text to describe how to play LightsOn, calls functions and sets up gridStart variable 
     print()
     print()
-    slowPrint(Fore.WHITE + 'Your objective is to turn all "X"s into "O"s by pushing the spheres.\n', delay = 0.02)
-    slowPrint('When pushed, a sphere will change a "X" into a "O" or a "O" into a "X".\n', delay = 0.02)
-    slowPrint('All adjacent spheres, vertically and horizontially, will also be changed.\n', delay = 0.02)
-    slowPrint('If this is too hard and you want to give up, type:"' + Fore.CYAN + 'give up' + Fore.WHITE + '"\n', delay = 0.02)
-    slowPrint('If you want to reset the puzzle, type: "' + Fore.CYAN + 'reset' + Fore.WHITE + '"\n', delay = 0.02)
+    slowPrint(Fore.WHITE + 'Your objective is to turn all "X"s into "O"s by pushing the spheres.\n', delay=0.02)
+    slowPrint('When pushed, a sphere will change a "X" into a "O" or a "O" into a "X".\n', delay=0.02)
+    slowPrint('All adjacent spheres, vertically and horizontially, will also be changed.\n', delay=0.02)
+    slowPrint('If this is too hard and you want to give up, type:"' + Fore.CYAN + 'give up' + Fore.WHITE + '"\n', delay=0.02)
+    slowPrint('If you want to reset the puzzle, type: "' + Fore.CYAN + 'reset' + Fore.WHITE + '"\n', delay=0.02)
     positions()
     print()
     gridStart = [['X' for switch in range(3)] for switch in range(3)]
@@ -335,11 +335,11 @@ def playLights():
                 if toggle.lower() == 'give up':
                     print()
                     sagaText = readSagaText(Fore.YELLOW + 'sagatext.txt', 185, 193)
-                    slowPrint(sagaText, delay = 0.02)
+                    slowPrint(sagaText, delay=0.02)
                     restartSaga()
                 #If player types 'reset' will turn everything to X
                 elif toggle.lower() == 'reset':
-                    slowPrint(Fore.YELLOW + 'You wait a small amount of time and all the lights turn off', delay = 0.02)
+                    slowPrint(Fore.YELLOW + 'You wait a small amount of time and all the lights turn off', delay=0.02)
                     gridStart = [['X' for switch in range(3)] for switch in range(3)]
                     break
                 #If player types a number 1 to 9, will toggle and update game grid
