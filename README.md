@@ -180,32 +180,17 @@ If you want to clone this repository:
 
 ## Testing
 
-Kidz Memo has been tested on: Chrome, Microsoft Edge and Safari(Reset button does not cover full bottom of page).
+Choices Saga has been tested on: Chrome, Microsoft Edge and Safari and works equally well on each.
 
-With Dev Tools all standard screen sizes were tested to make sure the site looks good and is still readable. 
+Each user input has been tested with incorrect input to test validation errors making sure all key strokes are accounted for. This has been done several times for each user Choice as well as Intro and Puzzle section. Puzzle runs within the proper paramaters and is solvable.
 
-I had a couple of friends, my brothers, and my daughter test the game and check user error possiblities.
-
-Links in the main menu take the user to correct game modes. Sound On/Off works correctly. Reset Button works correctly by reshuffling the whole game board.
-
-Win message pops up on player completion of a game mode and can be closed.
+I had have friends and my brothers test the game and check user error possiblities.
 
 ## Validator Test
 
-* HTML
-    * Using the [W3C Validator](https://validator.w3.org/#validate_by_input), code was checked for each webpage of Kidz Memo to see if there were any errors. There were no errors.
-    ![W3C HTML Test](assets/readmeimages/htmlvalidator.png)
-* CSS
-    * Using the [W3C Validator](https://jigsaw.w3.org/css-validator/) the code for CSS was checked for errors, there were none.
-    ![W3C CSS Test](assets/readmeimages/cssvalidator.png)
-* Javascript
-    * Using the [JShint Validator](https://jshint.com/) we analyzed the Javascript code. There are no errors but 17 warnings, most of which are :'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-* Accessibility 
-    * Using the Lighthouse dev tool from Chrome; accessibitly, performace, best practices and SEO were tested for each page.
-    
-![Validator Test Home Page](assets/readmeimages/lighthouse1.png)
-![Validator Test Easy Mode](assets/readmeimages/lighthouse2.png)
-![Validator Test Hard Mode](assets/readmeimages/lighthouse3.png)
+[Pep8 Python Validator](https://pep8ci.herokuapp.com/) is used to validate Choices Saga python code.
+
+There are no errors in Choices Saga!
 
 ### Bugs
 
@@ -213,12 +198,13 @@ Here are some, but not all, of the bugs that were fixed during development.
 
 | Bug | Fix |
 | :--- | :--- |
-| Boxes for the game areas not aligning properly | Commented out lines of CSS code and reapplied them one by one. |
-| Sound Button not working | Googled javascript code for muting, read several sites and put it into code. Trial and error until it worked. |
-| Not being able to close the pop up win message | Googled ways to close a modal pop up and tested several varients.
-| Boxes not flipping when clicked | Doubled checked CSS and javascript function to make sure right elements were selected for flipping|
-
-There was alot of back and forth with the writing of several lines of code, saving, running and re-writing. For some functions to work, all 3 elements had to be right, HTML, CSS and Javascript. Rereading course material and Googling that same material to better grasp the concepts was needed. 
+| In the toggle function, after user input, the grid was not updating properly | Had to recreate grid using new values |
+| Used long and repetative code to create grid and update adjacent cells | Created an adjacents dictonary and ran through it with a for loop to check and update properly. |
+| After game restart, it was skipping over story sections | Deleted True False global variables that were used to track progress. Called function directly after user input to go to next section instead | 
+| Stuck in a While loop | Had forgotten to add a return value or break |
+| When printing puzzle grid it was all coming on one line  | Added a empty print() inside the outter loop so it would jump to a new line after printing each row |
+| Reading over from text file was not showing update player dictonary values | Was missing the .items() to player in function trying to replace words |
+| Input was not accepting lowercase form of the words | Added the missing '.lower()' to the variable matching user input |
 
 There are no unsolved errors.
 
@@ -228,19 +214,11 @@ There are no unsolved errors.
 
 ### Code Used
 
-Most of the code I wrote myself with a lot of trial and error, saving and viewing on web browser. 
+Using the tutorial videos from Code Institute and some help from Chatgpt, I was able to figure out and construct the code for Choices Saga. There was alot of trial error and some hindsight for future developments.
 
-For the structure of the functions for the game I followed [Paddy Walshes Project](https://github.com/paddyw11/Paddy-walsh-project-2b).
+For all of the functions, especially with while loops, I had to write down and draw what I was trying to achieve so that I could visualize it better. Going through it step by step helped create the work I did.
 
-For the modal pop up I followed code from [W3School](https://www.w3schools.com/howto/howto_css_modals.asp).
-
-Structure for the README file is from my project [Ways to Relax](https://github.com/reltoom/Project-1-Relax) adjusted to fit Kidz Memo.
-
-### Media
-
-Audio clip is from [Free Sound](https://freesound.org/).
-
-Images for the Memo game are drawn by my daughter.
+Structure for the README file is from my project [Ways to Relax](https://github.com/reltoom/Project-1-Relax) adjusted to fit Choices Saga.
 
 ### Acknowledgments
 
@@ -248,4 +226,4 @@ Thank you to my daughter and wife for helping support me through my studies.
 
 Thank you to the Swedish Slack channel for keeping my spirits high.
 
-Thank you to my mentor from CI, Precious, for giving me advice and guidelines on the project.
+Thank you to my friends on the great feeback to my project.
