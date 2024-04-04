@@ -47,7 +47,6 @@ def intro():
             playerLanguages = input(Fore.WHITE + 'Type: ' + Fore.CYAN + 'English' + Fore.WHITE + ', ' + Fore.CYAN + 'Swedish' + Fore.WHITE + '\n')
             # Takes away the commas from the answers
             known_languages = [language.strip() for language in playerLanguages.split(',')]
-
             # Checks each language for exact match, adds it to player dict and joins them together with 'and' if needed
             if all(language in ['English', 'Swedish'] for language in known_languages):
                 player.update({'languages': ' and '.join(known_languages)})
@@ -61,7 +60,6 @@ def intro():
         while True:
             print()
             favoriteColor = input(Fore.WHITE + 'What is your favorite color ' + player['name'] + '?\n')
-
             # Checks if input is only letters and allows for spaces
             if favoriteColor.replace(' ', '').isalpha():
                 player.update({'color': favoriteColor})
@@ -82,7 +80,6 @@ def intro():
                 slowPrint(Fore.YELLOW + upDatedSagaText)
                 choiceStairsWindow()
                 return
-
             # If 'No' input, then restart intro questions
             elif start.lower() == 'no' or start.lower() == 'n':
                 for key in player:
@@ -114,7 +111,7 @@ def readSagaText(sagaPath, readStart, readEnd ):
 
 # Function to read sagatext.txt from lines 1 to 13
 def updateSaga():
-    sagaText = readSagaText('sagatext.txt', 1, 13)    
+    sagaText = readSagaText('sagatext.txt', 1, 13)
     return sagaText
 
 # Function for restarting game after end or death
@@ -128,7 +125,7 @@ def restartSaga():
         intro()
     elif restart.lower() == 'no' or restart.lower() == 'n':
         slowPrint(Fore.MAGENTA + 'You have chosen to stop playing Choices Saga! Until next time.')
-        exit()            
+        exit()
     return 
 
 # Function for choice stairs or window, read corresponding lines
@@ -142,7 +139,7 @@ def choiceStairsWindow():
             sagaText = readSagaText('sagatext.txt', 16, 30)
             print()
             slowPrint(Fore.YELLOW + sagaText)
-            choiceWeaponHelpHarper()    
+            choiceWeaponHelpHarper()
             return 
         # If player writes window, read lines that go from that choice
         elif playerChoice.lower() == 'window':
@@ -191,7 +188,7 @@ def choiceQuietlyRun():
                 sagaText = readSagaText('sagatext.txt', 69, 71)
                 slowPrint(Fore.YELLOW + sagaText)
                 choiceTalkAvoid()
-            break        
+            break
         elif playerChoice.lower() == 'run':
             sagaText = readSagaText('sagatext.txt', 140, 144)
             print()
@@ -276,7 +273,6 @@ def playLights():
     # Function to switch X to O and vise versa. Creates adjacents and switchs those too
     def toggleLights(switchNumber, gridStart):
         rows, cols = len(gridStart), len(gridStart[0])
-
         # Creates adjacents and files them in a dictonary.
         adjacents = {
             1: [(0, 0), (0, 1), (1, 0)],
@@ -289,7 +285,6 @@ def playLights():
             8: [(2, 1), (1, 1), (2, 0), (2, 2)],
             9: [(2, 2), (1, 2), (2, 1)]
         }
-
         # Goes through adjacents and self to switch X to O and O to X            
         for rowLight, colLight in adjacents.get(switchNumber, []):
             row = rowLight
@@ -298,7 +293,6 @@ def playLights():
                 gridStart[row][col] = 'O'
             else:
                 gridStart[row][col] = 'X'
-
         # Puzzle win condition, if all lights are O with print final grid and exit game
         if all(switch == 'O' for row in gridStart for switch in row):
             print()
@@ -328,9 +322,9 @@ def playLights():
         print()
 
         # Inner while loop to not repost numbered grid and description text, player input section
-        while True:    
+        while True:
             try:
-                toggle = input(Fore.WHITE + 'Choose a number 1-9 to turn a sphere or type:"' + Fore.CYAN + 'give up' + Fore.WHITE + '" or "' + Fore.CYAN + 'reset' + Fore.WHITE + '"\n')              
+                toggle = input(Fore.WHITE + 'Choose a number 1-9 to turn a sphere or type:"' + Fore.CYAN + 'give up' + Fore.WHITE + '" or "' + Fore.CYAN + 'reset' + Fore.WHITE + '"\n')
                 # If player types give up, game will end
                 if toggle.lower() == 'give up':
                     print()
@@ -355,9 +349,7 @@ def playLights():
         # Updates and shows game grid after new input. Breaks outloop if win condition is met.    
         if toggleLights(toggle, gridStart):
             break
-        print()     
+        print()
 
 # Calls the starting-intro function kicking of the whole Choices Saga
 intro()
-
-
