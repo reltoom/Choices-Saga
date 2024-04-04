@@ -11,9 +11,9 @@ player = {
     'color': ''
 }
 
-def slowPrint(text, delay = 0.02):
+def slowPrint(text, delay=0.02):
     for char in text:
-        print(char, end= '', flush = True)
+        print(char, end='', flush=True)
         time.sleep(delay)
 
 #Welcome message before intro
