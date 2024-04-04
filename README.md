@@ -11,15 +11,13 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
 
 * [User Experience](#user-experience-ux)
   * [User Stories](#user-stories)
+  * [Planning Process](#planning-process)
   * [Design](#design)
     * [Colour Scheme](#colour-scheme)
     * [Typography](#typography)
     * [Future Implementations](#future-implementations)
 * [Features](#features)
     * [The Home Page](#the-home-page)
-    * [The Yoga Page](#the-yoga-page)
-    * [The Watsu Page](#the-watsu-page)
-    * [The Newsletter-Sign Up Page](#the-newsletter-sign-up-page)
     * [The Thank You Page](#the-thank-you-page)
 * [Technologies](#technologies)
   * [Languages](#languages)
@@ -30,7 +28,6 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
    * [Bugs](#bugs)
 * [Credits](#credits)
   * [Code Used](#code-used)
-  * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
 - - -
@@ -38,16 +35,26 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
 
 ### User Stories
 
-#### First Time Visitor Goals
+#### Visitor Goals
 
-* Easy to understand what game you will play and how.
-* Easy to navigate and start a game.
-* Easy to reset the game after winning.
+* To play an interactive story game.
+* Have an engaging experience, where your choices matter.
+* Interesting story and something to challenge you.
 
 #### Returning Visitor Goals
 
-* Layout is the same as before.
-* Trying to beat the game modes faster than before.
+* Choosing a different story path 
+* Seeing how different answers and choices effect what you do.
+
+## Planning Process
+
+For Choices Saga, I knew I wanted an adventure story with choices at certain points, a 'player' character with different values/items that could effect the story and atleast one puzzle for the user to solve.
+
+* First, I created a player dictonary with some keys and blank values. To fill this in, I added an 'intro' function that asks several questions and fills in the player character by writing to the player dict.
+* Second, I thought of a possible puzzle and created the code for it. I encapsulated it into one function so I could call it when needed. For the puzzle, I made sure I could solve it myself first and then worked on creating the code for it. I wanted this puzzle to be the 'high point or climax' of the story, something to challenge the user after making it through most of the story.
+* Third, I came up with a basic story idea. Since this would be a whole lot of text, I decide to create a text file for the actual story and read it from my python file. Once I started writing the story, whenever I reached a possible 'choice' point, I would write keywords for the options but contine writing only 1 path until I reached the end of the story. 
+* Forth, I went back to all of the 'empty' choice key words and filled in a new story arc, possibly creating new keywords/choices. I did this until there were no empty keywords/choices.
+* Last, I created the functions(for each choice) in Python to read the story text(only certain lines) and then tied them together so that the right function would run after each user choice.
 
 ## Design
 
@@ -66,9 +73,7 @@ I wanted the color scheme to happy, fun and bright. Something to draw a kids att
 
 ### Typography
 
-One type of font from Google Fonts was used for this site.
-
-* For text, Kidz Memo uses [Permanent Marker](https://fonts.google.com/specimen/Permanent+Marker). This seemed like a fun 'marker' style that a kid could use. 
+I kept the original text style from the command line interface, as I like the retro look.
 
 ### Future Implementations
 
@@ -105,30 +110,6 @@ The home page of 'Kidz Memo' has the main header and then game rules and descrip
 ![Home Page Image](assets/readmeimages/rules.png)
 ![Home Page Image](assets/readmeimages/gamemodes.png)
 
-#### The Easy Mode
-
-The header in this game mode holds links to the home page as well as the other game mode. It also has the Sound On/Off button.
-![Header Easy Mode](assets/readmeimages/header2.png)
-
-The Easy Mode version of the game is a 3 by 3 square. It includes one extra piece as 4 pairs is 8 blocks, so the 9th block is to fill the grid, it is unclickable.
-![Easy Mode Showing Backface Of Cards](assets/readmeimages/game3x3.png)
-![Easy Mode All Pictures Visable](assets/readmeimages/easycomplete.png)
-![Easy Mode](assets/readmeimages/extrapiece.png)
-
-There is a 'reset' button at the bottom of the page to play again or to just reset the game board if you want.
-![Reset Button](assets/readmeimages/resetbutton.png)
-
-#### The Hard Mode
-
-The header in this game mode holds links to the home page as well as the other game mode. It also has the Sound On/Off button.
-![Header Hard Mode](assets/readmeimages/header3.png)
-
-The Hard Mode version of the game is a 4 by 4 square. It has 8 pairs for a total of 16 blocks.
-![Hard Mode Showing Backface Of Cards](assets/readmeimages/game4x4.png)
-![Hard Mode All Pictures Visable](assets/readmeimages/hardcomplete.png)
-
-There is a 'reset' button at the bottom of the page to play again or to just reset the game board if you want.
-![Reset Button](assets/readmeimages/resetbutton.png)
 
 - - -
 
@@ -136,25 +117,20 @@ There is a 'reset' button at the bottom of the page to play again or to just res
 
 ### Languages 
 
-HTML, CSS & Javascript were used in the making of Kidz Memo.
+Python was used in the making of Choices Saga
 
 ###  Websites & Programs 
 
-* [Balsamiq](https://balsamiq.com/) - Created wireframes for basic outline and structure of site.
 * [Github](https://github.com/) - Created repository and stored files here after commits.
 * [Microsoft Visual Studio](https://visualstudio.microsoft.com/) - Wrote code and did commits to Github from here.
-* [Google Fonts](https://fonts.google.com/) - Imported font for Kidz Memo.
-* [Google Developer Tools](https://developer.chrome.com/docs/devtools) - For viewing in different screen resolutions and finding errors.
-* [TinyPNG](https://tinypng.com/) Compressed images for better performance.
-* [Favicon.io](https://favicon.io/) Created the 'Memo' favicon for the webbrowser.
 * [W3 School](https://www.w3schools.com/) Read and used as a guide for some code.
-* [UI.dev Am I Responsive](https://ui.dev/amiresponsive) Used to get image of all different devices.
+
 
 - - -
 
 ## Deployment 
 
-Kidz Memo is deployed from Github Pages - [Kidz Memo](https://reltoom.github.io/Memo/).
+Kidz Memo is deployed from Heroku - [Choices Saga](https://choices-saga-20bfad436228.herokuapp.com/).
 
 To Deploy the site from GitHub Pages:
 

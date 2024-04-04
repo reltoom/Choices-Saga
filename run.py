@@ -39,7 +39,7 @@ def intro():
                 print(Fore.RED + 'Please enter a name with only letters!\n')
 
         #Setting up next question
-        slowPrint(Fore.WHITE + 'Could you tell us which of these languages you know: English and/or Swedish?\n', delay = 0.02)
+        slowPrint(Fore.WHITE + 'Could you tell us which of these languages you know: ' + Fore.CYAN + 'English' + Fore.WHITE + ' and/or ' + Fore.CYAN + 'Swedish' + Fore.WHITE + '?\n', delay = 0.02)
 
         #Question about which languages the player knows and control
         while True:
