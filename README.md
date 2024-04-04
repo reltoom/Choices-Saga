@@ -58,7 +58,7 @@ For Choices Saga, I knew I wanted an adventure story with choices at certain poi
 
 ## Design
 
-Visually there was not too much to design with Choices Saga as it is a command line application. Although I did use slowPrint to slowly print out the story text. This way it is not so much text at once, possibly overwhelming the user. Also choosing different colors for the text was included, for better user experience.
+Visually there was not too much to design with Choices Saga as it is a command line application. Although I did use slowPrint to slowly print out the story text. This way it is not so much text at once, possibly overwhelming the user. Story text is also centered, creating space both infront and behind text printed for easier reading. Also choosing different colors for the text was included, for better user experience.
 
 ### Color Scheme
 
@@ -73,7 +73,7 @@ By importing the 'colorama' package, I was able to incorporate different colors 
 
 Image showing most of the color choices:
 
-  ![Choices Saga](readmeimages/colorchoices.png)
+![Choices Saga](readmeimages/colorchoices.png)
 
 ### Typography
 
@@ -92,9 +92,35 @@ I kept the original text style from the command line interface, as I like the re
 
 When starting program,the user is welcomed to <span style="color:green;">Choices Saga</span>  and informed that they will need to answer some question before the story starts.
 
-  ![welcome/start](readmeimages/welcome.png)
+![Welcome/start](readmeimages/welcome.png)
 
+Most of Choices Saga is about the story. The story is spaced in center to help identify the story text.
 
+![Story](readmeimages/story.png)
+
+Throughout the story, the user is faced with choices to make.
+
+![Choices](readmeimages/choices.png)
+
+When the user advances enough in the story, they will come to a puzzle. The instructions are clear and inform the user of how to play the puzzle.
+
+![Puzzle Instructions](readmeimages/puzzleinstructions.png)
+
+By typing a number 1 to 9, the user is able to change the Xs into Os.
+
+![Playing the Puzzle](readmeimages/playingpuzzle.png)
+
+When the user changes all the Xs into Os, the puzzle is solved.
+
+![Winning the Puzzle](readmeimages/puzzlewin.png)
+
+If the user dies or finishes the story, they are able to restart Choices Saga.
+
+![Restarting](readmeimages/restartsaga.png)
+
+If the user chooses to not restart Choices Saga, an exit message will be printed.
+
+![Exiting Choices Saga](readmeimages/exit.png)
 
 - - -
 
