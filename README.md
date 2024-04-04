@@ -1,6 +1,6 @@
 # Choices Saga
 
-![Load screen of Choices Saga, after pressing Run Program](/readmeimages/ScreenOnLoad.png)
+![Load screen of Choices Saga, after pressing Run Program](/readmeimages/screenonload.png)
 
 Visit the deployed site here: [Choices Saga](https://choices-saga-20bfad436228.herokuapp.com/)
 
@@ -40,6 +40,8 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
 * To play an interactive story game.
 * Have an engaging experience, where your choices matter.
 * Interesting story and something to challenge you.
+* Easy to differentiate between story text, input text and error text.
+
 
 #### Returning Visitor Goals
 
@@ -58,18 +60,22 @@ For Choices Saga, I knew I wanted an adventure story with choices at certain poi
 
 ## Design
 
-Using the images of my daughters drawings for the game was a deliberate style choice. Each of her pictures had different dimensions(width and heigth) so it was very difficult to adjust the images so they would be centered and show full image. I could have chosen a more fluid or easier to crop image, but I thought having a child's drawing as the art for Kidz Memo would add layer of excitment and wonder for kids. Maybe they could get their drawings into the game?
+Visually there was not too much to design with Choices Saga as it is a command line application, although choosing different colors for the text was included, for better user expeirnce.
 
 ### Color Scheme
 
-I wanted the color scheme to happy, fun and bright. Something to draw a kids attention to it.
-* `Rgba(234, 213, 255, 1)`A light lavender type is used as the primary background color the whole site.
-* `Rgba(221, 72, 247, 1)`A shade of purple is used for Links, headers, text for reset button and background for Sound On/Off button.
-* `Rgba(254, 252, 71, 1)`A shade of dark yellow is used for the main header background and main text background. It is also the background of the reset button and the text of the Sound On/Off button.
-* `Rgba(5, 43, 237, 1)`A shade of royal blue is used for the name of the site, Kidz Memo, and then the text for rules and game modes.
+By importing the 'colorama' package, I was able to incorporate different colors for each type of text.
+* <span style="color:green;">Green</span> was chosen for only the title 'CHOICES SAGA' so it would stand out more.
+* <span style="color:yellow;">Yellow</span> is used as the story text. To understand what is happening with the story, one will have to read the yellow text. Yellow is also used in the puzzle and the spheres glow a warm light.
+* <span style="color:white;">White</span> is used for all input choices the user will need to make. In order for a user to know what choices to make, read the white text.
+* <span style="color:cyan;">Cyan</span> is used for all keywords that the user will need to type, creating an easy visual for the user to understand.
+* <span style="color:red;">Red</span> is used for error messages. If the user types wrong input, a red message appears telling the user what they need to do to fix it. Red is also used in the puzzle to clearly show with 'spheres'(X), is not turned on.
+* <span style="color:royalblue;">Blue</span> text is used to signify restarting of the game or restarting of the Intro section.
+* <span style="color:magenta;">Magenta</span> was only used once and it is to clearly mark the user ending Choices Saga, exiting program.
 
+Image showing most of the color choices:
 
-  ![Kidz Memo](assets/readmeimages/colorscheme.png)
+  ![Choices Saga](readmeimages/colorchoices.png)
 
 ### Typography
 
