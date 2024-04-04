@@ -56,14 +56,17 @@ def intro():
                                     + Fore.WHITE + ', '
                                     + Fore.CYAN + 'Swedish'
                                     + Fore.WHITE + '\n')
+            #Convert to lowercase for more versitle comparison
+            playerLanguagesLower = playerLanguages.lower()
+            knownLanguagesLower = ['english', 'swedish']
             # Takes away the commas from the answers
-            known_languages = [language.strip() for language
-                               in playerLanguages.split(',')]
+            knownLanguages = [language.strip() for language
+                               in playerLanguagesLower.split(',')]
             # Checks each language for exact match, adds it to player dict and
             # joins them together with 'and' when printed.
-            if all(language in ['English', 'Swedish'] for language
-                   in known_languages):
-                player.update({'languages': ' and '.join(known_languages)})
+            if all(language in knownLanguagesLower for language
+                   in knownLanguages):
+                player.update({'languages': ' and '.join(knownLanguages)})
                 slowPrint(Fore.YELLOW + 'So you know: '
                           + player['languages'] + '.\n')
                 break
