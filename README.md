@@ -17,8 +17,6 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
     * [Typography](#typography)
     * [Future Implementations](#future-implementations)
 * [Features](#features)
-    * [The Home Page](#the-home-page)
-    * [The Thank You Page](#the-thank-you-page)
 * [Technologies](#technologies)
   * [Languages](#languages)
   * [Websites & Programs](#websites-programs)
@@ -60,7 +58,7 @@ For Choices Saga, I knew I wanted an adventure story with choices at certain poi
 
 ## Design
 
-Visually there was not too much to design with Choices Saga as it is a command line application, although choosing different colors for the text was included, for better user expeirnce.
+Visually there was not too much to design with Choices Saga as it is a command line application. Although I did use slowPrint to slowly print out the story text. This way it is not so much text at once, possibly overwhelming the user. Also choosing different colors for the text was included, for better user experience.
 
 ### Color Scheme
 
@@ -83,10 +81,10 @@ I kept the original text style from the command line interface, as I like the re
 
 ### Future Implementations
 
-1. Add a moves counter to see how many 'turns' it takes to win.
-2. Adding a timer to see how long it takes to win a game.
-3. Different pictures for the 'cards' and even bigger game area.
-4. Get kids to send in their own drawings for Kidz Memo art.
+1. Adding more story choices in the current chapter.
+2. Making the player character items and languages have more effect on the story.
+3. Adding more things for the player to interact with.
+4. Adding a whole new chapter, new puzzles, and a way to save progress.
 
 - - -
 
@@ -108,13 +106,6 @@ The whole site is responsive and works just as well on mobile phones as desktop 
 
 * When a player complete a game by matching all the pairs, a win message will pop up. This can be closed by clicking anywhere on the message.
 ![Win Message On The Completion Of A Game](assets/readmeimages/winmessage.png)
-
-#### The Home Page
-
-The home page of 'Kidz Memo' has the main header and then game rules and descriptions.
-![Main Header](assets/readmeimages/header1.png)
-![Home Page Image](assets/readmeimages/rules.png)
-![Home Page Image](assets/readmeimages/gamemodes.png)
 
 
 - - -
