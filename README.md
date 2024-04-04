@@ -90,22 +90,10 @@ I kept the original text style from the command line interface, as I like the re
 
 ## Features
 
-Kidz Memo has a 'home' page, 'easy mode' page and 'hard mode' page.
+When starting program,the user is welcomed to <span style="color:green;">Choices Saga</span>  and informed that they will need to answer some question before the story starts.
 
-The whole site is responsive and works just as well on mobile phones as desktop screens.
+  ![welcome/start](readmeimages/welcome.png)
 
-* The word 'Memo'is writen in font-style and color scheme used for the site as the favicon.
-
-  ![favicon](assets/readmeimages/faviconreadme.png)
-
-* The Header section includes the title: 'Kidz Memo' as well as links to the game modes  and Sound On/Off button.
-    ![Sound Button On](assets/readmeimages/soundon.png)
-    ![Sound Button Off](assets/readmeimages/soundoff.png)
-
-* The Main area holds the rules, descriptions of game modes and the game areas.
-
-* When a player complete a game by matching all the pairs, a win message will pop up. This can be closed by clicking anywhere on the message.
-![Win Message On The Completion Of A Game](assets/readmeimages/winmessage.png)
 
 
 - - -
