@@ -1,6 +1,6 @@
 # Choices Saga
 
-![Load screen of Choices Saga, after pressing Run Program](readmeimages/screenonload.png)
+![Load screen of Choices Saga, after pressing Run Program](readmeimages/loadscreen.png)
 
 Visit the deployed site here: [Choices Saga](https://choices-saga-20bfad436228.herokuapp.com/)
 
