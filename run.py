@@ -56,12 +56,12 @@ def intro():
                                     + Fore.WHITE + ', '
                                     + Fore.CYAN + 'Swedish'
                                     + Fore.WHITE + '\n')
-            #Convert to lowercase for more versitle comparison
+            # Convert to lowercase for more versitle comparison
             playerLanguagesLower = playerLanguages.lower()
             knownLanguagesLower = ['english', 'swedish']
             # Takes away the commas from the answers
             knownLanguages = [language.strip() for language
-                               in playerLanguagesLower.split(',')]
+                              in playerLanguagesLower.split(',')]
             # Checks each language for exact match, adds it to player dict and
             # joins them together with 'and' when printed.
             if all(language in knownLanguagesLower for language
@@ -80,10 +80,10 @@ def intro():
         while True:
             print()
             favoriteC = input(Fore.WHITE +
-                                  'What is your favorite color '
-                                  + player['name'] + '?\n')
+                              'What is your favorite color '
+                              + player['name'] + '?\n')
             # Checks if input is only letters and allows for spaces
-            if favoriteC.replace(' ', '').isalpha()and len(favoriteC) <= 20:
+            if favoriteC.replace(' ', '').isalpha() and len(favoriteC) <= 20:
                 player.update({'color': favoriteC})
                 slowPrint(Fore.YELLOW + 'Wow, ' + player['color']
                           + ' is a very nice color!\n')
