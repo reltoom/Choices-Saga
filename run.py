@@ -11,7 +11,7 @@ player = {
 
 
 # Function to print text appearing slowly
-def slowPrint(text, delay=0.02):
+def slowPrint(text, delay=0.00001):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
@@ -258,7 +258,7 @@ def choiceQuietlyRun():
             sagaText = readSagaText('sagatext.txt', 50, 56)
             print()
             slowPrint(Fore.YELLOW + sagaText)
-            if 'Swedish' in player['languages']:
+            if 'swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 59, 66)
                 slowPrint(Fore.YELLOW + sagaText)
                 choiceTalkAvoid()
@@ -296,7 +296,7 @@ def choiceTalkAvoid():
             slowPrint(Fore.YELLOW + sagaText)
             restartSaga()
         elif playerChoice.lower() == 'avoid':
-            if 'Swedish' in player['languages']:
+            if 'swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 91, 96)
                 print()
                 slowPrint(Fore.YELLOW + sagaText)

@@ -28,7 +28,6 @@ Choices Saga is a Python command line interface (CLI) application that runs the 
   * [Code Used](#code-used)
   * [Acknowledgments](#acknowledgments)
 
-- - -
 ## User Experience (UX)
 
 ### User Stories
@@ -90,7 +89,6 @@ I kept the original text style from the command line interface, as I like the re
 3. Adding more things for the player to interact with.
 4. Adding a whole new chapter, new puzzles, and a way to save progress.
 
-- - -
 
 ## Features
 
@@ -126,7 +124,6 @@ If the user chooses to not restart Choices Saga, an exit message will be printed
 
 ![Exiting Choices Saga](readmeimages/exit.png)
 
-- - -
 
 ## Technologies 
 
@@ -144,7 +141,6 @@ I imported the following packages:
 * [Microsoft Visual Studio](https://visualstudio.microsoft.com/) - Wrote code and did commits to Github from here.
 * [W3 School](https://www.w3schools.com/) Read and used as a guide for some code.
 
-- - -
 
 ## Deployment 
 
@@ -180,7 +176,7 @@ If you want to clone this repository:
 4. Open your code editor and go to 'Clone Repository' usually under 'File'.
 5. Paste if your code and then 'Clone'.
 
-- - -
+
 
 ## Testing
 
@@ -211,10 +207,11 @@ Here are some, but not all, of the bugs that were fixed during development.
 | Input was not accepting lowercase form of the words | Added the missing '.lower()' to the variable matching user input |
 | Typing 'give up' throws Traceback error + others errors | Had 'Fore.Yellow' inside parameter for naming a variable, should only be for print or slowPrint, So deleted it from there |
 | On restart question, typing wrong input caused nothing to happen but going to previous player choice | Had forgotten to wrap everything in a 'while True' and 'else' statement. |
+| If user wrote Swedish for language, it was still not going down right story path | I had changed to compare lowercase 'Swedish' and then print it to player dict. but it was still checking for an Uppercase 'Swedish' in story choice. Made it lower case and fixed issue. |
 
 There are no unsolved errors.
 
-- - -
+
 
 ## Credits
 
