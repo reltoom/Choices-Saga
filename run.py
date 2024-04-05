@@ -215,6 +215,7 @@ def choiceStairsWindow():
 # Function for choice help harper or ask for weapon
 def choiceWeaponHelpHarper():
     while True:
+        print()
         playerChoice = input(Fore.WHITE + 'Do you want to help Harper search'
                              'for survivors or tell him you need something to'
                              ' protect yourself with? Type: "'
@@ -282,6 +283,7 @@ def choiceQuietlyRun():
 # Function for talking to raider or avoiding them
 def choiceTalkAvoid():
     while True:
+        print()
         playerChoice = input(Fore.WHITE + 'So, will you talk with them or try'
                              ' to avoid them? Type: "'
                              + Fore.CYAN + 'talk'
@@ -316,6 +318,7 @@ def choiceTalkAvoid():
 # Function for choice to sprint across the road or act like one of them
 def choiceSprintAct():
     while True:
+        print()
         playerChoice = input(Fore.WHITE + 'Take your chances and sprint or '
                              'put on a performance? Type: "'
                              + Fore.CYAN + 'sprint'
