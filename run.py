@@ -11,7 +11,7 @@ player = {
 
 
 # Function to print text appearing slowly
-def slowPrint(text, delay=0.00001):
+def slowPrint(text, delay=0.02):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
