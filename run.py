@@ -151,7 +151,7 @@ def updateSaga():
     return sagaText
 
 
-# Function for restarting game after end or death
+# Function for restarting game after end or death of player
 def restartSaga():
     while True:
         print()
@@ -160,16 +160,19 @@ def restartSaga():
                         + Fore.WHITE + ' or '
                         + Fore.CYAN + 'No'
                         + Fore.WHITE + '\n')
+        # If user types yes or y, converts to lower , then runs intro function
         if restart.lower() == 'yes' or restart.lower() == 'y':
             for key in player:
                 player[key] = ''
             slowPrint(Fore.BLUE + "Okay, let's take it from the start.\n\n")
             intro()
+        # If user types no or n, converts to lower, Will exit program.
         elif restart.lower() == 'no' or restart.lower() == 'n':
             slowPrint(Fore.MAGENTA +
                       'You have chosen to stop playing Choices Saga!'
                       ' Until next time.')
             exit()
+        # If invalid in put, prints message.
         else:
             print(Fore.RED + 'Please type "'
                   + Fore.CYAN + 'yes'
@@ -203,7 +206,7 @@ def choiceStairsWindow():
             print()
             slowPrint(Fore.YELLOW + sagaText)
             restartSaga()
-        # If any other text or numbers, ask player to write correctly
+        # If user types anything other than above, print message
         else:
             print(Fore.RED + 'Type: "'
                   + Fore.CYAN + 'stairs'
@@ -223,12 +226,14 @@ def choiceWeaponHelpHarper():
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'weapon'
                              + Fore.WHITE + '"\n')
+        # If player writes help, read lines that go from that choice
         if playerChoice.lower() == 'help':
             sagaText = readSagaText('sagatext.txt', 147, 169)
             print()
             slowPrint(Fore.YELLOW + sagaText)
             backDoor()
             return
+        # If player writes weapon, read lines that go from that choice
         elif playerChoice.lower() == 'weapon':
             player.update({'belt': 'knife'})
             sagaText = readSagaText('sagatext.txt', 33, 47)
@@ -236,6 +241,7 @@ def choiceWeaponHelpHarper():
             slowPrint(Fore.YELLOW + sagaText)
             choiceQuietlyRun()
             return
+        # If user types anything other than above, print message
         else:
             print(Fore.RED + 'Type: "'
                   + Fore.CYAN + 'help'
@@ -254,24 +260,29 @@ def choiceQuietlyRun():
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'run'
                              + Fore.WHITE + '"\n')
+        # If player writes quietly, read lines that go from that choice
         if playerChoice.lower() == 'quietly':
             sagaText = readSagaText('sagatext.txt', 50, 56)
             print()
             slowPrint(Fore.YELLOW + sagaText)
+            # If user has chosen Swedish as language read these lines
             if 'swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 59, 66)
                 slowPrint(Fore.YELLOW + sagaText)
                 choiceTalkAvoid()
+            # If user has chosen only English as language read these lines
             else:
                 sagaText = readSagaText('sagatext.txt', 69, 71)
                 slowPrint(Fore.YELLOW + sagaText)
                 choiceTalkAvoid()
             break
+        # If player writes run, read lines that go from that choice
         elif playerChoice.lower() == 'run':
             sagaText = readSagaText('sagatext.txt', 140, 144)
             print()
             slowPrint(Fore.YELLOW + sagaText)
             restartSaga()
+        # If user types anything other than above, print message
         else:
             print(Fore.RED + 'Type: "'
                   + Fore.CYAN + 'quietly'
@@ -290,23 +301,28 @@ def choiceTalkAvoid():
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'avoid'
                              + Fore.WHITE + '"\n')
+        # If player writes talk, read lines that go from that choice
         if playerChoice.lower() == 'talk':
             sagaText = readSagaText('sagatext.txt', 74, 78)
             print()
             slowPrint(Fore.YELLOW + sagaText)
             restartSaga()
+        # If player writes avoid, read lines that go from that choice
         elif playerChoice.lower() == 'avoid':
+            # If user has chosen Swedish as language read these lines
             if 'swedish' in player['languages']:
                 sagaText = readSagaText('sagatext.txt', 91, 96)
                 print()
                 slowPrint(Fore.YELLOW + sagaText)
                 backDoor()
+            # If user has chosen only English as language read these lines
             else:
                 sagaText = readSagaText('sagatext.txt', 81, 88)
                 print()
                 slowPrint(Fore.YELLOW + sagaText)
                 choiceSprintAct()
             break
+        # If user types anything other than above, print message
         else:
             print(Fore.RED + 'Type: "'
                   + Fore.CYAN + 'talk'
@@ -325,17 +341,20 @@ def choiceSprintAct():
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'act'
                              + Fore.WHITE + '"\n')
+        # If player writes sprint, read lines that go from that choice
         if playerChoice.lower() == 'sprint':
             sagaText = readSagaText('sagatext.txt', 99, 108)
             print()
             slowPrint(Fore.YELLOW + sagaText)
             backDoor()
             return
+        # If player writes act, read lines that go from that choice
         elif playerChoice.lower() == 'act':
             sagaText = readSagaText('sagatext.txt', 111, 123)
             print()
             slowPrint(Fore.YELLOW + sagaText)
             restartSaga()
+        # If user types anything other than above, print message
         else:
             print(Fore.RED + 'Type: "'
                   + Fore.CYAN + 'sprint'
@@ -344,7 +363,7 @@ def choiceSprintAct():
                   + Fore.RED + '"\n')
 
 
-# Function for Mages back door text leading ot lightson puzzle
+# Function for Mages back door text leading to lightson puzzle
 def backDoor():
     sagaText = readSagaText('sagatext.txt', 126, 137)
     print()
