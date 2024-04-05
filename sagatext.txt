@@ -25,9 +25,9 @@
     attack and being raided. We are trying to gather everyone at the mages
     tower. Make your way there!"
 
-    As Harper turns around to run out again, you stop him. Do you want to 
-    help Harper search for survivors or tell him you need something to 
-    protect yourself with.
+    As Harper turns around to run out, you stop him. Caught up in the
+    moment you are not sure what to do, but thinking quickly you decide
+    on the best coarse of action for you.
 
     Ask For Item - Weapon
     "Do you have anything I can use to fight with if I get attacked on my

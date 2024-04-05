@@ -167,15 +167,15 @@ def restartSaga():
             intro()
         elif restart.lower() == 'no' or restart.lower() == 'n':
             slowPrint(Fore.MAGENTA +
-                    'You have chosen to stop playing Choices Saga!'
-                    ' Until next time.')
+                      'You have chosen to stop playing Choices Saga!'
+                      ' Until next time.')
             exit()
         else:
             print(Fore.RED + 'Please type "'
-                + Fore.CYAN + 'yes'
-                + Fore.RED + '" or "'
-                + Fore.CYAN + 'no'
-                + Fore.RED + '"')
+                  + Fore.CYAN + 'yes'
+                  + Fore.RED + '" or "'
+                  + Fore.CYAN + 'no'
+                  + Fore.RED + '"')
 
 
 # Function for choice stairs or window, read corresponding lines
@@ -215,7 +215,9 @@ def choiceStairsWindow():
 # Function for choice help harper or ask for weapon
 def choiceWeaponHelpHarper():
     while True:
-        playerChoice = input(Fore.WHITE + 'Type: "'
+        playerChoice = input(Fore.WHITE + 'Do you want to help Harper search'
+                             'for survivors or tell him you need something to'
+                             ' protect yourself with? Type: "'
                              + Fore.CYAN + 'help'
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'weapon'
@@ -280,7 +282,8 @@ def choiceQuietlyRun():
 # Function for talking to raider or avoiding them
 def choiceTalkAvoid():
     while True:
-        playerChoice = input(Fore.WHITE + 'Type: "'
+        playerChoice = input(Fore.WHITE + 'So, will you talk with them or try'
+                             ' to avoid them? Type: "'
                              + Fore.CYAN + 'talk'
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'avoid'
@@ -313,7 +316,8 @@ def choiceTalkAvoid():
 # Function for choice to sprint across the road or act like one of them
 def choiceSprintAct():
     while True:
-        playerChoice = input(Fore.WHITE + 'Type: "'
+        playerChoice = input(Fore.WHITE + 'Take your chances and sprint or '
+                             'put on a performance? Type: "'
                              + Fore.CYAN + 'sprint'
                              + Fore.WHITE + '" or "'
                              + Fore.CYAN + 'act'
