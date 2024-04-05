@@ -140,6 +140,7 @@ I imported the following packages:
 * [Heroku](https://heroku.com/) - For deploying Choices Saga.
 * [Microsoft Visual Studio](https://visualstudio.microsoft.com/) - Wrote code and did commits to Github from here.
 * [W3 School](https://www.w3schools.com/) Read and used as a guide for some code.
+* [Lucid](https://lucid.co/) I used Lucid to develope my flowchart.
 
 
 ## Deployment 
