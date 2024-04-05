@@ -114,7 +114,7 @@ By typing a number 1 to 9, the user is able to change the Xs into Os.
 
 ![Playing the Puzzle](readmeimages/playingpuzzle.png)
 
-When the user changes all the Xs into Os, the puzzle is solved.
+When the user changes all the Xs into Os, the puzzle is solved. In the story text itself is a very suttle clue on how to solve it. The black iron door which is painted gold in the corner and in the center -- all odd numbers once.
 
 ![Winning the Puzzle](readmeimages/puzzlewin.png)
 
