@@ -153,23 +153,29 @@ def updateSaga():
 
 # Function for restarting game after end or death
 def restartSaga():
-    print()
-    restart = input(Fore.WHITE + 'Would you like to restart Choices Saga? '
-                    + Fore.CYAN + 'Yes'
-                    + Fore.WHITE + ' or '
-                    + Fore.CYAN + 'No'
-                    + Fore.WHITE + '\n')
-    if restart.lower() == 'yes' or restart.lower() == 'y':
-        for key in player:
-            player[key] = ''
-        slowPrint(Fore.BLUE + "Okay, let's take it from the start.\n\n")
-        intro()
-    elif restart.lower() == 'no' or restart.lower() == 'n':
-        slowPrint(Fore.MAGENTA +
-                  'You have chosen to stop playing Choices Saga!'
-                  ' Until next time.')
-        exit()
-    return
+    while True:
+        print()
+        restart = input(Fore.WHITE + 'Would you like to restart Choices Saga?'
+                        + Fore.CYAN + ' Yes'
+                        + Fore.WHITE + ' or '
+                        + Fore.CYAN + 'No'
+                        + Fore.WHITE + '\n')
+        if restart.lower() == 'yes' or restart.lower() == 'y':
+            for key in player:
+                player[key] = ''
+            slowPrint(Fore.BLUE + "Okay, let's take it from the start.\n\n")
+            intro()
+        elif restart.lower() == 'no' or restart.lower() == 'n':
+            slowPrint(Fore.MAGENTA +
+                    'You have chosen to stop playing Choices Saga!'
+                    ' Until next time.')
+            exit()
+        else:
+            print(Fore.RED + 'Please type "'
+                + Fore.CYAN + 'yes'
+                + Fore.RED + '" or "'
+                + Fore.CYAN + 'no'
+                + Fore.RED + '"')
 
 
 # Function for choice stairs or window, read corresponding lines
@@ -437,9 +443,8 @@ def playLights():
                 # If player types give up, game will end
                 if toggle.lower() == 'give up':
                     print()
-                    sagaText = readSagaText(Fore.YELLOW +
-                                            'sagatext.txt', 185, 193)
-                    slowPrint(sagaText)
+                    sagaText = readSagaText('sagatext.txt', 185, 193)
+                    slowPrint(Fore.YELLOW + sagaText)
                     restartSaga()
                 # If player types 'reset' will turn everything to X
                 elif toggle.lower() == 'reset':
