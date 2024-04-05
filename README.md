@@ -209,6 +209,8 @@ Here are some, but not all, of the bugs that were fixed during development.
 | When printing puzzle grid it was all coming on one line  | Added a empty print() inside the outter loop so it would jump to a new line after printing each row |
 | Reading over from text file was not showing update player dictonary values | Was missing the .items() to player in function trying to replace words |
 | Input was not accepting lowercase form of the words | Added the missing '.lower()' to the variable matching user input |
+| Typing 'give up' throws Traceback error + others errors | Had 'Fore.Yellow' inside parameter for naming a variable, should only be for print or slowPrint, So deleted it from there |
+| On restart question, typing wrong input caused nothing to happen but going to previous player choice | Had forgotten to wrap everything in a 'while True' and 'else' statement. |
 
 There are no unsolved errors.
 
